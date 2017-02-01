@@ -2,14 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/activity_third"
+    android:id="@+id/activity_fourth"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.willtheconqueror.calculator.ThirdActivity"
+    tools:context="com.willtheconqueror.calculator.FourthActivity"
     android:background="@color/material.dark_grey">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar_third"
+        android:id="@+id/toolbar_fourth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -23,21 +23,22 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/screen3"
-        android:layout_below="@+id/toolbar_third"
+        android:id="@+id/screen4"
+        android:layout_below="@+id/toolbar_fourth"
         android:layout_alignParentStart="true">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:paddingStart="5dp"
-        android:id="@+id/textView3"
+        android:paddingEnd="5dp"
+        android:id="@+id/textView4"
         android:maxLines="4"
         android:scrollHorizontally="true"
         android:textColor="@color/material.darker_grey"
         android:background="@android:color/darker_gray"
         android:textSize="55sp"
-        tools:ignore="RtlSymmetry" />
+        tools:ignore="RtlSymmetry"
+        android:gravity="bottom|end"/>
 
     <LinearLayout
         android:orientation="vertical"
@@ -53,6 +54,11 @@
         android:layout_weight="1"
         android:id="@+id/Row1">
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/material.A400"
+            android:layout_weight="1">
             <Button
                 android:text="7"
                 android:layout_width="match_parent"
@@ -63,32 +69,42 @@
                 android:onClick="onClickNumber"
                 style="@style/AppTheme.Button"
                 android:background="?android:attr/selectableItemBackgroundBorderless"
-                android:textColor="@color/material.grey" />
+                android:textColor="@android:color/black" />
+        </FrameLayout>
 
-
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/material.A400"
+            android:layout_weight="1">
             <Button
                 android:text="8"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:id="@+id/btn8"
                 android:textSize="30sp"
                 android:onClick="onClickNumber"
                 style="@style/AppTheme.Button"
                 android:background="?android:attr/selectableItemBackgroundBorderless"
-                android:textColor="@color/material.grey" />
+                android:textColor="@android:color/black" />
+        </FrameLayout>
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/material.A400"
+            android:layout_weight="1">
             <Button
                 android:text="9"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:id="@+id/btn9"
                 android:textSize="30sp"
                 android:onClick="onClickNumber"
                 style="@style/AppTheme.Button"
                 android:background="?android:attr/selectableItemBackgroundBorderless"
-                android:textColor="@color/material.grey" />
+                android:textColor="@android:color/black" />
+        </FrameLayout>
 
     </LinearLayout>
 
@@ -100,30 +116,17 @@
         android:layout_marginTop="1dp"
         android:layout_weight="1">
 
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/material.A400"
-            android:layout_weight="1">
-
             <Button
                 android:text="4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:id="@+id/btn4"
                 android:textSize="30sp"
                 android:onClick="onClickNumber"
                 style="@style/AppTheme.Button"
                 android:background="?android:attr/selectableItemBackgroundBorderless"
-                android:textColor="@android:color/black" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/material.A400"
-            android:layout_weight="1">
+                android:textColor="@color/material.grey" />
 
             <Button
                 android:text="5"
@@ -135,14 +138,7 @@
                 android:onClick="onClickNumber"
                 style="@style/AppTheme.Button"
                 android:background="?android:attr/selectableItemBackgroundBorderless"
-                android:textColor="@android:color/black" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/material.A400"
-            android:layout_weight="1">
+                android:textColor="@color/material.grey" />
 
             <Button
                 android:text="6"
@@ -154,8 +150,7 @@
                 android:onClick="onClickNumber"
                 style="@style/AppTheme.Button"
                 android:background="?android:attr/selectableItemBackgroundBorderless"
-                android:textColor="@android:color/black" />
-        </FrameLayout>
+                android:textColor="@color/material.grey" />
 
     </LinearLayout>
 
@@ -167,6 +162,12 @@
         android:layout_marginTop="1dp"
         android:id="@+id/Row3">
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/material.A400"
+            android:layout_weight="1">
+
             <Button
                 android:text="1"
                 android:layout_width="match_parent"
@@ -177,8 +178,14 @@
                 android:onClick="onClickNumber"
                 style="@style/AppTheme.Button"
                 android:background="?android:attr/selectableItemBackgroundBorderless"
-                android:textColor="@color/material.grey" />
+                android:textColor="@android:color/black" />
+        </FrameLayout>
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/material.A400"
+            android:layout_weight="1">
             <Button
                 android:text="2"
                 android:layout_width="match_parent"
@@ -187,45 +194,6 @@
                 android:id="@+id/btn2"
                 android:textSize="30sp"
                 android:onClick="onClickNumber"
-                style="@style/AppTheme.Button"
-                android:background="?android:attr/selectableItemBackgroundBorderless"
-                android:textColor="@color/material.grey" />
-
-        <Button
-            android:text="3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:id="@+id/btn3"
-            android:textSize="30sp"
-            android:onClick="onClickNumber"
-            style="@style/AppTheme.Button"
-            android:background="?android:attr/selectableItemBackgroundBorderless"
-            android:textColor="@color/material.grey" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:layout_marginTop="1dp"
-        android:id="@+id/Row4">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/material.A400"
-            android:layout_weight="1">
-
-            <Button
-                android:text="enter"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/btnEnter"
-                android:textSize="23sp"
-                android:onClick="onClickEnter"
                 style="@style/AppTheme.Button"
                 android:background="?android:attr/selectableItemBackgroundBorderless"
                 android:textColor="@android:color/black" />
@@ -237,34 +205,63 @@
             android:background="@color/material.A400"
             android:layout_weight="1">
         <Button
-            android:text="0"
+            android:text="3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/btn0"
+            android:layout_weight="1"
+            android:id="@+id/btn3"
             android:textSize="30sp"
-            style="@style/AppTheme.Button"
-            android:background="?android:attr/selectableItemBackgroundBorderless"
-            android:textColor="@android:color/black"
-            android:onClick="onClickNumber" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/material.A400"
-            android:layout_weight="1">
-        <Button
-            android:text="DEL"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/btnDelete"
-            android:textSize="23sp"
-            android:onClick="onClickDelete"
+            android:onClick="onClickNumber"
             style="@style/AppTheme.Button"
             android:background="?android:attr/selectableItemBackgroundBorderless"
             android:textColor="@android:color/black" />
         </FrameLayout>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="1dp"
+        android:id="@+id/Row4">
+
+            <Button
+                android:text="enter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/btnEnter"
+                android:textSize="23sp"
+                android:onClick="onClickEnter"
+                style="@style/AppTheme.Button"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:textColor="@android:color/white" />
+
+        <Button
+            android:text="0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/btn0"
+            android:textSize="30sp"
+            style="@style/AppTheme.Button"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:textColor="@android:color/white"
+            android:onClick="onClickNumber" />
+
+        <Button
+            android:text="DEL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/btnDelete"
+            android:textSize="23sp"
+            android:onClick="onClickDelete"
+            style="@style/AppTheme.Button"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:textColor="@android:color/white" />
 
             </LinearLayout>
 

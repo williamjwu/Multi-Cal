@@ -51,14 +51,19 @@ public class ThirdActivity extends AppCompatActivity {
 
         //switch to second activity
         else if (item.getItemId() == R.id.action_second_activity) {
-
             Intent getNameScreenIntent = new Intent(this, SecondActivity.class);
             startActivity(getNameScreenIntent);
         }
 
         //notifies users that they are currently in third activity
         else if (item.getItemId() == R.id.action_third_activity) {
-            Toast.makeText(ThirdActivity.this, "You are already in Hexadecimal mode", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ThirdActivity.this, "You are already in Binary mode", Toast.LENGTH_SHORT).show();
+        }
+
+        //switch to fourth activity
+        else if (item.getItemId() == R.id.action_fourth_activity) {
+            Intent getNameScreenIntent = new Intent(this, FourthActivity.class);
+            startActivity(getNameScreenIntent);
         }
 
         return super.onOptionsItemSelected(item);
@@ -113,7 +118,7 @@ public class ThirdActivity extends AppCompatActivity {
         displayValue += b.getText();
         if (displayValue.length() > 9) {
             displayValue = displayValue.substring(0, 9);
-            Toast.makeText(ThirdActivity.this, "Warning: You have reached the input limit", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ThirdActivity.this, "You have reached the input limit", Toast.LENGTH_SHORT).show();
         }
         updateScreen();
     }
