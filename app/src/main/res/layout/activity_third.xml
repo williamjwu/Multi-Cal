@@ -34,8 +34,8 @@
         android:id="@+id/textView3"
         android:maxLines="3"
         android:scrollHorizontally="true"
-        android:textColor="@color/material.dark_grey"
-        android:background="@android:color/white"
+        android:textColor="@color/material.darker_grey"
+        android:background="@android:color/darker_gray"
         android:textSize="55sp"
         tools:ignore="RtlSymmetry"
         android:gravity="bottom|end"/>
