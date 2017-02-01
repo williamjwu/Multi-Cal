@@ -23,13 +23,13 @@ public class FourthActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_third);
+        setContentView(R.layout.activity_fourth);
 
-        display4 = (TextView)findViewById(R.id.textView3);
+        display4 = (TextView)findViewById(R.id.textView4);
         display4.setText(displayValue);
         btnEnter = (Button)findViewById(R.id.btnEnter);
 
-        Toolbar actionToolbar = (Toolbar)findViewById(R.id.toolbar_third);
+        Toolbar actionToolbar = (Toolbar)findViewById(R.id.toolbar_fourth);
         setSupportActionBar(actionToolbar);
     }
 
@@ -98,7 +98,7 @@ public class FourthActivity extends AppCompatActivity {
             try {
                 decimal = Integer.parseInt(displayValue);
                 positionalNotation value = new positionalNotation(decimal);
-                displayValue = value.toBinary();
+                displayValue = value.toHexadecmal();
                 updateScreen();
             }
             catch(NumberFormatException ex) {

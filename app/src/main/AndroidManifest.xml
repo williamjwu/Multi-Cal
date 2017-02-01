@@ -28,8 +28,6 @@
             android:name=".FourthActivity"
             android:label="Hexadecimal"
             android:screenOrientation="portrait"/>
-
-
     </application>
 
 </manifest>

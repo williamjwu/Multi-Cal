@@ -67,6 +67,12 @@ public class SecondActivity extends AppCompatActivity {
             startActivity(getNameScreenIntent);
         }
 
+        //switch to fourth activity
+        else if (item.getItemId() == R.id.action_fourth_activity) {
+            Intent getNameScreenIntent = new Intent(this, FourthActivity.class);
+            startActivity(getNameScreenIntent);
+        }
+
         return super.onOptionsItemSelected(item);
     }
     private void updateScreen() {

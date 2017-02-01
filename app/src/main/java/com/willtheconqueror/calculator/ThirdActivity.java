@@ -51,7 +51,6 @@ public class ThirdActivity extends AppCompatActivity {
 
         //switch to second activity
         else if (item.getItemId() == R.id.action_second_activity) {
-
             Intent getNameScreenIntent = new Intent(this, SecondActivity.class);
             startActivity(getNameScreenIntent);
         }
@@ -59,6 +58,12 @@ public class ThirdActivity extends AppCompatActivity {
         //notifies users that they are currently in third activity
         else if (item.getItemId() == R.id.action_third_activity) {
             Toast.makeText(ThirdActivity.this, "You are already in Binary mode", Toast.LENGTH_SHORT).show();
+        }
+
+        //switch to fourth activity
+        else if (item.getItemId() == R.id.action_fourth_activity) {
+            Intent getNameScreenIntent = new Intent(this, FourthActivity.class);
+            startActivity(getNameScreenIntent);
         }
 
         return super.onOptionsItemSelected(item);
