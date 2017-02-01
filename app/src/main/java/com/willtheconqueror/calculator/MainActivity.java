@@ -127,58 +127,58 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void chooseOperation() {
+        //only call choose Operation when there getOperator has value
 
         calculatorBrain calculator = new calculatorBrain(firstInput, secondInput);
 
-        if (getOperator.equals("+")) {
-            displayValue = Double.toString(calculator.add());
-            updateScreen();
-            storePreviousResult();
-            clearInfo();
-            restorePreviousResult();
-        }
-        else if (getOperator.equals("-")) {
-            displayValue = Double.toString(calculator.minus());
-            updateScreen();
-            storePreviousResult();
-            clearInfo();
-            restorePreviousResult();
-        }
-        else if (getOperator.equals("×")) {
-            displayValue = Double.toString(calculator.multiply());
-            updateScreen();
-            storePreviousResult();
-            clearInfo();
-            restorePreviousResult();
-        }
-        else if (getOperator.equals("÷")) {
-
-            if (secondInput == 0.) {
-                displayValue = "Error";
-                updateScreen();
-                clearInfo();
-            }
-            else {
-                displayValue = Double.toString(calculator.divide());
+        switch(getOperator) {
+            case "+":
+                displayValue = Double.toString(calculator.add());
                 updateScreen();
                 storePreviousResult();
                 clearInfo();
                 restorePreviousResult();
-            }
-        }
-        else if (getOperator.equals("%")) {
-            displayValue = Double.toString(calculator.remain());
-            updateScreen();
-            storePreviousResult();
-            clearInfo();
-            restorePreviousResult();
-        }
-
-        //secure program, can be deleted
-        else {
-            displayValue = Double.toString(firstInput);
-            updateScreen();
-            clearInfo();
+                break;
+            case "-":
+                displayValue = Double.toString(calculator.minus());
+                updateScreen();
+                storePreviousResult();
+                clearInfo();
+                restorePreviousResult();
+                break;
+            case "×":
+                displayValue = Double.toString(calculator.multiply());
+                updateScreen();
+                storePreviousResult();
+                clearInfo();
+                restorePreviousResult();
+                break;
+            case "÷":
+                if (secondInput == 0.) {
+                    displayValue = "Error";
+                    updateScreen();
+                    clearInfo();
+                }
+                else {
+                    displayValue = Double.toString(calculator.divide());
+                    updateScreen();
+                    storePreviousResult();
+                    clearInfo();
+                    restorePreviousResult();
+                }
+                break;
+            case "%":
+                displayValue = Double.toString(calculator.remain());
+                updateScreen();
+                storePreviousResult();
+                clearInfo();
+                restorePreviousResult();
+                break;
+            default:
+                displayValue = Double.toString(firstInput);
+                updateScreen();
+                clearInfo();
+                break;
         }
 
     }
