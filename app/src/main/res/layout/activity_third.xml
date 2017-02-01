@@ -30,14 +30,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
         android:id="@+id/textView3"
-        android:maxLines="4"
+        android:maxLines="3"
         android:scrollHorizontally="true"
         android:textColor="@color/material.darker_grey"
         android:background="@android:color/darker_gray"
         android:textSize="55sp"
-        tools:ignore="RtlSymmetry" />
+        tools:ignore="RtlSymmetry"
+        android:gravity="bottom|end"/>
 
     <LinearLayout
         android:orientation="vertical"
@@ -129,7 +130,6 @@
                 android:text="5"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:id="@+id/btn5"
                 android:textSize="30sp"
                 android:onClick="onClickNumber"
@@ -148,7 +148,6 @@
                 android:text="6"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:id="@+id/btn6"
                 android:textSize="30sp"
                 android:onClick="onClickNumber"
