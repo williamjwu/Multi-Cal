@@ -35,7 +35,7 @@
             android:layout_weight="1"
             android:id="@+id/textView2"
             android:maxLines="2"
-            android:paddingEnd="3dp"
+            android:paddingEnd="5dp"
             android:scrollHorizontally="true"
             android:textColor="@android:color/background_light"
             android:background="@color/material.blue.600"

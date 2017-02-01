@@ -22,7 +22,11 @@
             android:screenOrientation="portrait"/>
         <activity
             android:name=".ThirdActivity"
-            android:label="Positional Notation"
+            android:label="Binary"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".FourthActivity"
+            android:label="Hexadecimal"
             android:screenOrientation="portrait"/>
 
 
