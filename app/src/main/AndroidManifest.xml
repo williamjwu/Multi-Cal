@@ -8,7 +8,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,10 +18,12 @@
         </activity>
         <activity
             android:name=".SecondActivity"
-            android:label="Quadratic Formula"/>
+            android:label="Quadratic Formula"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".ThirdActivity"
-            android:label="Positional Notation"/>
+            android:label="Positional Notation"
+            android:screenOrientation="portrait"/>
 
 
     </application>
