@@ -58,7 +58,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/btn7"
-                    android:textSize="29sp"
+                    android:textSize="26sp"
                     android:onClick="onClickNumber"
                     style="@style/AppTheme.Button"
                     android:background="?android:attr/selectableItemBackgroundBorderless" />
@@ -76,7 +76,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/btn8"
-                    android:textSize="29sp"
+                    android:textSize="26sp"
                     android:onClick="onClickNumber"
                     style="@style/AppTheme.Button"
                     android:background="?android:attr/selectableItemBackgroundBorderless" />
@@ -94,7 +94,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/btn9"
-                    android:textSize="29sp"
+                    android:textSize="26sp"
                     android:onClick="onClickNumber"
                     style="@style/AppTheme.Button"
                     android:background="?android:attr/selectableItemBackgroundBorderless" />
@@ -112,7 +112,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/btnDivide"
-                    android:textSize="25sp"
+                    android:textSize="26sp"
                     android:textColor="@android:color/white"
                     android:onClick="onClickOperator"
                     android:background="?android:attr/selectableItemBackgroundBorderless" />
@@ -138,7 +138,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/btn4"
-                    android:textSize="29sp"
+                    android:textSize="26sp"
                     android:onClick="onClickNumber"
                     style="@style/AppTheme.Button"
                     android:background="?android:attr/selectableItemBackgroundBorderless" />
@@ -156,7 +156,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/btn5"
-                    android:textSize="29sp"
+                    android:textSize="26sp"
                     android:onClick="onClickNumber"
                     style="@style/AppTheme.Button"
                     android:background="?android:attr/selectableItemBackgroundBorderless" />
@@ -174,7 +174,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/btn6"
-                    android:textSize="29sp"
+                    android:textSize="26sp"
                     android:onClick="onClickNumber"
                     style="@style/AppTheme.Button"
                     android:background="?android:attr/selectableItemBackgroundBorderless" />
@@ -193,7 +193,7 @@
                     android:layout_height="match_parent"
                     android:id="@+id/btnMultiply"
                     android:background="?android:attr/selectableItemBackgroundBorderless"
-                    android:textSize="25sp"
+                    android:textSize="26sp"
                     android:textColor="@android:color/white"
                     android:onClick="onClickOperator" />
         </FrameLayout>
@@ -218,7 +218,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/btn1"
-                    android:textSize="29sp"
+                    android:textSize="26sp"
                     android:onClick="onClickNumber"
                     style="@style/AppTheme.Button"
                     android:background="?android:attr/selectableItemBackgroundBorderless" />
@@ -236,7 +236,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/btn2"
-                    android:textSize="29sp"
+                    android:textSize="26sp"
                     android:onClick="onClickNumber"
                     style="@style/AppTheme.Button"
                     android:background="?android:attr/selectableItemBackgroundBorderless" />
@@ -254,7 +254,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/btn3"
-                    android:textSize="29sp"
+                    android:textSize="26sp"
                     android:onClick="onClickNumber"
                     style="@style/AppTheme.Button"
                     android:background="?android:attr/selectableItemBackgroundBorderless" />
@@ -273,7 +273,7 @@
                     android:layout_height="match_parent"
                     android:id="@+id/btnMinus"
                     android:background="?android:attr/selectableItemBackgroundBorderless"
-                    android:textSize="25sp"
+                    android:textSize="26sp"
                     android:textColor="@android:color/white"
                     android:onClick="onClickOperator" />
         </FrameLayout>
@@ -298,7 +298,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/btnClear"
-                    android:textSize="20sp"
+                    android:textSize="19sp"
                     android:onClick="onClickClear"
                     style="@style/AppTheme.Button"
                     android:background="?android:attr/selectableItemBackgroundBorderless" />
@@ -316,7 +316,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/btn0"
-                    android:textSize="29sp"
+                    android:textSize="26sp"
                     android:onClick="onClickNumber"
                     style="@style/AppTheme.Button"
                     android:background="?android:attr/selectableItemBackgroundBorderless" />
@@ -334,7 +334,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/btnEqual"
-                    android:textSize="29sp"
+                    android:textSize="26sp"
                     android:onClick="onClickEqual"
                     style="@style/AppTheme.Button"
                     android:background="?android:attr/selectableItemBackgroundBorderless" />
@@ -353,7 +353,7 @@
                     android:layout_height="match_parent"
                     android:id="@+id/btnPlus"
                     android:background="?android:attr/selectableItemBackgroundBorderless"
-                    android:textSize="25sp"
+                    android:textSize="26sp"
                     android:textColor="@android:color/white"
                     android:onClick="onClickOperator" />
         </FrameLayout>
@@ -378,7 +378,7 @@
                     android:layout_height="match_parent"
                     android:id="@+id/btnDelete"
                     android:onClick="onClickDelete"
-                    android:textSize="20sp"
+                    android:textSize="19sp"
                     style="@style/AppTheme.Button"
                     android:background="?android:attr/selectableItemBackgroundBorderless" />
         </FrameLayout>
@@ -395,7 +395,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/btnDot"
-                    android:textSize="29sp"
+                    android:textSize="26sp"
                     android:onClick="onClickNumber"
                     style="@style/AppTheme.Button"
                     android:background="?android:attr/selectableItemBackgroundBorderless" />
@@ -413,7 +413,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/btnSqrt"
-                    android:textSize="29sp"
+                    android:textSize="26sp"
                     android:onClick="onClickFunction"
                     style="@style/AppTheme.Button"
                     android:background="?android:attr/selectableItemBackgroundBorderless" />
@@ -432,7 +432,7 @@
                     android:layout_height="match_parent"
                     android:id="@+id/btnRemain"
                     android:background="?android:attr/selectableItemBackgroundBorderless"
-                    android:textSize="25sp"
+                    android:textSize="26sp"
                     android:textColor="@android:color/white"
                     android:onClick="onClickOperator" />
         </FrameLayout>
