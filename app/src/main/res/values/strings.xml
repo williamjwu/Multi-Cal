@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="enter_a_text_view">Please input a:</string>
+    <string name="enter_b_text_view">Please input b:</string>
+    <string name="enter_c_text_view">Please input c:</string>
+    <string name="menu_action_toQuadratic">Quadratic Formula</string>
+    <string name="menu_action_toPositionalNotation">Positional Notation</string>
+    <string name="menu_action_toMain">Main Function</string>
+</resources>
