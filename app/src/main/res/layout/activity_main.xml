@@ -414,7 +414,7 @@
                     android:layout_height="match_parent"
                     android:id="@+id/btnSqrt"
                     android:textSize="26sp"
-                    android:onClick="onClickFunction"
+                    android:onClick="onClickSqrt"
                     style="@style/AppTheme.Button"
                     android:background="?android:attr/selectableItemBackgroundBorderless" />
         </FrameLayout>

@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
     String displayValue = "0";
     private TextView display;
     String getOperator = "";
-    String getFunction = "";
     double firstInput;
     double secondInput;
     double pendingValue;
@@ -204,7 +203,6 @@ public class MainActivity extends AppCompatActivity {
         secondInput = 0.;
         displayValue = "0";
         getOperator = "";
-        getFunction = "";
         updateScreen();
     }
 
@@ -222,18 +220,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    protected void onClickFunction(View v) {
-        Button b = (Button)v;
-        getFunction = b.getText().toString();
-
-        if (getFunction.equals("√")) {
+    protected void onClickSqrt(View v) {
 
             displayValue = Double.toString(Math.sqrt(firstInput));
             storePreviousResult();
             updateScreen();
             clearInfo();
             restorePreviousResult();
-        }
+
     }
 
 }
