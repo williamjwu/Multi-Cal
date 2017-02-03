@@ -202,8 +202,8 @@ public class MainActivity extends AppCompatActivity {
         firstInput = 0.;
         secondInput = 0.;
         displayValue = "0";
-        getOperator = "";
         updateScreen();
+        getOperator = "";
     }
 
     protected void onClickDelete(View v) {
@@ -221,13 +221,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     protected void onClickSqrt(View v) {
-
-            displayValue = Double.toString(Math.sqrt(firstInput));
-            storePreviousResult();
-            updateScreen();
-            clearInfo();
-            restorePreviousResult();
-
+        displayValue = Double.toString(Math.sqrt(firstInput));
+        storePreviousResult();
+        updateScreen();
+        clearInfo();
+        restorePreviousResult();
     }
 
 }
