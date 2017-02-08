@@ -165,6 +165,8 @@ public class MainActivity extends AppCompatActivity {
                     displayValue = "Error";
                     updateScreen();
                     clearInfo();
+                    ifUserInputting = false;
+                    switchClearAndDelete();
                 }
                 else {
                     displayValue = Double.toString(calculator.divide());
@@ -242,16 +244,20 @@ public class MainActivity extends AppCompatActivity {
         DecimalFormat formatDouble = new DecimalFormat("#.#######");
         try {
             displayValue = Double.toString(Double.valueOf(formatDouble.format(firstInput * firstInput)));
+            storePreviousResult();
+            updateScreen();
+            clearInfo();
+            restorePreviousResult();
+            ifUserInputting = false;
+            switchClearAndDelete();
         }
-        catch (ClassCastException ex) {
+        catch (IllegalArgumentException ex) {
             displayValue = "Error";
             updateScreen();
             clearInfo();
+            ifUserInputting = false;
+            switchClearAndDelete();
         }
-        storePreviousResult();
-        updateScreen();
-        clearInfo();
-        restorePreviousResult();
     }
 
     protected void onClickSqrt(View v) {
