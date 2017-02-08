@@ -47,18 +47,21 @@ public class FourthActivity extends AppCompatActivity {
         if (item.getItemId() == R.id.action_main_activity) {
             Intent getNameScreenIntent = new Intent(this, MainActivity.class);
             startActivity(getNameScreenIntent);
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
         }
 
         //switch to second activity
         else if (item.getItemId() == R.id.action_second_activity) {
             Intent getNameScreenIntent = new Intent(this, SecondActivity.class);
             startActivity(getNameScreenIntent);
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
         }
 
         //switch to third activity
         else if (item.getItemId() == R.id.action_third_activity) {
             Intent getNameScreenIntent = new Intent(this, ThirdActivity.class);
             startActivity(getNameScreenIntent);
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
         }
 
         //notifies users that they are currently in fourth activity
