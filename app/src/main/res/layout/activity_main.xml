@@ -46,6 +46,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:paddingTop="1dp"
         android:id="@+id/Row1">
 
         <FrameLayout
@@ -373,12 +374,12 @@
             android:background="@color/material.grey"
             android:layout_weight="1">
                 <Button
-                    android:text="DEL"
+                    android:text="x²"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/btnDelete"
-                    android:onClick="onClickDelete"
-                    android:textSize="19sp"
+                    android:id="@+id/btnSquare"
+                    android:onClick="onClickSquare"
+                    android:textSize="21sp"
                     style="@style/AppTheme.Button"
                     android:background="?android:attr/selectableItemBackgroundBorderless" />
         </FrameLayout>
