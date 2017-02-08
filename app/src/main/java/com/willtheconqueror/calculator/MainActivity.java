@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
     double firstInput;
     double secondInput;
     double pendingValue;
-    Button btnDelete;
+    Button btnClear;
+    Boolean ifUserInputting;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         //display
         display = (TextView)findViewById(R.id.textView);
         display.setText(displayValue);
-        btnDelete = (Button)findViewById(R.id.btnDelete);
+        btnClear = (Button)findViewById(R.id.btnClear);
 
         Toolbar actionToolbar = (Toolbar)findViewById(R.id.toolbar_main);
         setSupportActionBar(actionToolbar);
@@ -115,11 +118,21 @@ public class MainActivity extends AppCompatActivity {
             //prevent crash method
             //prevent adding a second "." in the display
             displayValue += b.getText();
+            ifUserInputting = true;
+            switchClearAndDelete();
         }
         updateScreen();
         checkIfInput();
     }
 
+    private void switchClearAndDelete() {
+        if (ifUserInputting) {
+            btnClear.setText("DEL");
+        }
+        else {
+            btnClear.setText("CLR");
+        }
+    }
     private void chooseOperation() {
         //only call choose Operation when there getOperator has value
 
@@ -192,33 +205,59 @@ public class MainActivity extends AppCompatActivity {
     protected void onClickEqual(View v) {
         if (!getOperator.equals("")) {
             chooseOperation();
+            ifUserInputting = false;
+            switchClearAndDelete();
         }
     }
 
     protected void onClickClear(View v) {
-        firstInput = 0.;
-        secondInput = 0.;
-        displayValue = "0";
-        updateScreen();
-        getOperator = "";
+        Button b = (Button)v;
+        String label = b.getText().toString();
+        switch (label) {
+            case "CLR":
+                firstInput = 0.;
+                secondInput = 0.;
+                displayValue = "0";
+                updateScreen();
+                getOperator = "";
+                break;
+            case "DEL":
+                if (displayValue.length() > 1) {
+                    displayValue = displayValue.substring(0, displayValue.length() - 1);
+                    updateScreen();
+                    checkIfInput();
+                }
+                else if (displayValue.length() == 1) {
+                    displayValue = "0";
+                    updateScreen();
+                    checkIfInput();
+                }
+                break;
+        }
+
     }
 
-    protected void onClickDelete(View v) {
-        if (displayValue.length() > 1) {
-            displayValue = displayValue.substring(0, displayValue.length() - 1);
-            updateScreen();
-            checkIfInput();
+    protected void onClickSquare(View v) {
+        //cast the output
+        DecimalFormat formatDouble = new DecimalFormat("#.#######");
+        try {
+            displayValue = Double.toString(Double.valueOf(formatDouble.format(firstInput * firstInput)));
         }
-        else if (displayValue.length() == 1) {
-            displayValue = "0";
+        catch (ClassCastException ex) {
+            displayValue = "Error";
             updateScreen();
-            checkIfInput();
+            clearInfo();
         }
-
+        storePreviousResult();
+        updateScreen();
+        clearInfo();
+        restorePreviousResult();
     }
 
     protected void onClickSqrt(View v) {
-        displayValue = Double.toString(Math.sqrt(firstInput));
+        //cast the output
+        DecimalFormat formatDouble = new DecimalFormat("#.#######");
+        displayValue = Double.toString(Double.valueOf(formatDouble.format(Math.sqrt(firstInput))));
         storePreviousResult();
         updateScreen();
         clearInfo();
