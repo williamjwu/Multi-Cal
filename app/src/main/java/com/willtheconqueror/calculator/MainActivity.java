@@ -184,6 +184,8 @@ public class MainActivity extends AppCompatActivity {
             chooseOperation();
         }
         getOperator = b.getText().toString();
+        displayValue += b.getText();
+        updateScreen();
         displayValue = "";
     }
 
