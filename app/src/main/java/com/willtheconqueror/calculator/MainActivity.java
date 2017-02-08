@@ -199,7 +199,7 @@ public class MainActivity extends AppCompatActivity {
             chooseOperation();
         }
         getOperator = b.getText().toString();
-        displayValue += b.getText();
+        displayValue = b.getText().toString();
         updateScreen();
         displayValue = "";
     }
@@ -207,6 +207,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onClickEqual(View v) {
         if (!getOperator.equals("")) {
             chooseOperation();
+            displayValue = "0";
             ifUserInputting = false;
             switchClearAndDelete();
         }
