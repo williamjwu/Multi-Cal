@@ -117,10 +117,10 @@ public class MainActivity extends AppCompatActivity {
             displayValue += b.getText();
         }
 
-        if (displayValue.length() > 11) {
-            displayValue = displayValue.substring(0, 11);
-            Toast.makeText(MainActivity.this, "You have reached the input limit", Toast.LENGTH_SHORT).show();
-        }
+//        if (displayValue.length() > 11) {
+//            displayValue = displayValue.substring(0, 11);
+//            Toast.makeText(MainActivity.this, "You have reached the input limit", Toast.LENGTH_SHORT).show();
+//        }
         updateScreen();
         checkIfInput();
     }

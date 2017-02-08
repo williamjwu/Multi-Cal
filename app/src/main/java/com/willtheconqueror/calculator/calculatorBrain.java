@@ -1,5 +1,7 @@
 package com.willtheconqueror.calculator;
 
+import java.text.DecimalFormat;
+
 /**
  * Created by William on 12/21/16.
  */
@@ -25,9 +27,13 @@ public class calculatorBrain {
         return firstInput * secondInput;
     }
     public double divide() {
-        return firstInput / secondInput;
+        //cast the output
+        DecimalFormat formatDouble = new DecimalFormat("#.#######");
+        return Double.valueOf(formatDouble.format(firstInput / secondInput));
     }
     public double remain() {
-        return firstInput % secondInput;
+        //cast the output
+        DecimalFormat formatDouble = new DecimalFormat("#.#######");
+        return Double.valueOf(formatDouble.format(firstInput % secondInput));
     }
 }
