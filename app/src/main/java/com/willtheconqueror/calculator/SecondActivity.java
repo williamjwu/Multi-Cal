@@ -54,6 +54,7 @@ public class SecondActivity extends AppCompatActivity {
         if (item.getItemId() == R.id.action_main_activity) {
             Intent getNameScreenIntent = new Intent(this, MainActivity.class);
             startActivity(getNameScreenIntent);
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
         }
 
         //notifies users that they are currently in second activity
@@ -65,12 +66,14 @@ public class SecondActivity extends AppCompatActivity {
         else if (item.getItemId() == R.id.action_third_activity) {
             Intent getNameScreenIntent = new Intent(this, ThirdActivity.class);
             startActivity(getNameScreenIntent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }
 
         //switch to fourth activity
         else if (item.getItemId() == R.id.action_fourth_activity) {
             Intent getNameScreenIntent = new Intent(this, FourthActivity.class);
             startActivity(getNameScreenIntent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }
 
         return super.onOptionsItemSelected(item);

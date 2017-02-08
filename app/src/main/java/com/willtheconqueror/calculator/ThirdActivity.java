@@ -47,12 +47,14 @@ public class ThirdActivity extends AppCompatActivity {
         if (item.getItemId() == R.id.action_main_activity) {
             Intent getNameScreenIntent = new Intent(this, MainActivity.class);
             startActivity(getNameScreenIntent);
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
         }
 
         //switch to second activity
         else if (item.getItemId() == R.id.action_second_activity) {
             Intent getNameScreenIntent = new Intent(this, SecondActivity.class);
             startActivity(getNameScreenIntent);
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
         }
 
         //notifies users that they are currently in third activity
@@ -64,6 +66,7 @@ public class ThirdActivity extends AppCompatActivity {
         else if (item.getItemId() == R.id.action_fourth_activity) {
             Intent getNameScreenIntent = new Intent(this, FourthActivity.class);
             startActivity(getNameScreenIntent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }
 
         return super.onOptionsItemSelected(item);

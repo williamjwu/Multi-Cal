@@ -59,18 +59,21 @@ public class MainActivity extends AppCompatActivity {
         else if (item.getItemId() == R.id.action_second_activity) {
             Intent getNameScreenIntent = new Intent(this, SecondActivity.class);
             startActivity(getNameScreenIntent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }
 
         //switch to third activity
         else if (item.getItemId() == R.id.action_third_activity) {
             Intent getNameScreenIntent = new Intent(this, ThirdActivity.class);
             startActivity(getNameScreenIntent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }
 
         //switch to fourth activity
         else if (item.getItemId() == R.id.action_fourth_activity) {
             Intent getNameScreenIntent = new Intent(this, FourthActivity.class);
             startActivity(getNameScreenIntent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }
 
         return super.onOptionsItemSelected(item);
