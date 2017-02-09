@@ -124,13 +124,22 @@ public class MainActivity extends AppCompatActivity {
             ifUserInputting = true;
             switchClearAndDelete();
         }
+        if (displayValue.length() > 11) {
+            displayValue = displayValue.substring(0, 11);
+            Toast.makeText(MainActivity.this, "You have reached the input limit", Toast.LENGTH_SHORT).show();
+        }
         updateScreen();
         checkIfInput();
     }
 
     private void switchClearAndDelete() {
         if (ifUserInputting) {
-            btnClear.setText("DEL");
+            if (displayValue.equals("0") || displayValue.equals("")) {
+                btnClear.setText("CLR");
+            }
+            else {
+                btnClear.setText("DEL");
+            }
         }
         else {
             btnClear.setText("CLR");
