@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     double secondInput;
     double pendingValue;
     Button btnClear;
-    Boolean ifUserInputting;
+    Boolean ifUserInputting = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -138,7 +138,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void switchClearAndDelete() {
         if (ifUserInputting) {
-            if (displayValue.equals("0") || displayValue.equals("")) {
+            if (displayValue.equals("0")) {
+                btnClear.setText("CLR");
+            }
+            else if (displayValue.equals("")) {
                 btnClear.setText("CLR");
             }
             else {
@@ -217,7 +220,9 @@ public class MainActivity extends AppCompatActivity {
         getOperator = b.getText().toString();
         displayValue = b.getText().toString();
         updateScreen();
-        displayValue = "";
+        if (!(displayValue.equals("") && getOperator.equals("-"))) {
+            displayValue = "";
+        }
     }
 
     protected void onClickEqual(View v) {
