@@ -31,6 +31,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //if an uncaught exception is thrown, the following line will stop the app from permanent crash
+        //will automatically start up after few seconds
+        Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler(this));
+
         //display
         display = (TextView)findViewById(R.id.textView);
         display.setText(displayValue);
