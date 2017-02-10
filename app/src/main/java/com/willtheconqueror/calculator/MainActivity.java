@@ -138,15 +138,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void switchClearAndDelete() {
         if (ifUserInputting) {
-            if (displayValue.equals("0")) {
-                btnClear.setText("CLR");
-            }
-            else if (displayValue.equals("")) {
-                btnClear.setText("CLR");
-            }
-            else {
-                btnClear.setText("DEL");
-            }
+            btnClear.setText("DEL");
         }
         else {
             btnClear.setText("CLR");
@@ -220,9 +212,7 @@ public class MainActivity extends AppCompatActivity {
         getOperator = b.getText().toString();
         displayValue = b.getText().toString();
         updateScreen();
-        if (!(displayValue.equals("") && getOperator.equals("-"))) {
-            displayValue = "";
-        }
+        displayValue = "";
     }
 
     protected void onClickEqual(View v) {
@@ -253,6 +243,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else if (displayValue.length() == 1) {
                     displayValue = "0";
+                    btnClear.setText("CLR");
                     updateScreen();
                     checkIfInput();
                 }
