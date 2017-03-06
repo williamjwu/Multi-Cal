@@ -37,7 +37,7 @@
             android:maxLines="2"
             android:paddingEnd="5dp"
             android:scrollHorizontally="true"
-            android:textColor="@color/material.darker_grey"
+            android:textColor="@android:color/white"
             android:textSize="55sp"
             tools:ignore="RtlSymmetry" />
 
@@ -53,61 +53,44 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@android:color/holo_orange_light"
                 android:orientation="horizontal">
 
-                <FrameLayout
+                <Button
+                    android:id="@+id/btn7"
+                    style="@style/AppTheme.Button"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@android:color/holo_orange_light">
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="onClickNumber"
+                    android:text="7"
+                    android:textColor="@android:color/white"
+                    android:textSize="26sp" />
 
-                    <Button
-                        android:id="@+id/btn7"
-                        style="@style/AppTheme.Button"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="?android:attr/selectableItemBackgroundBorderless"
-                        android:onClick="onClickNumber"
-                        android:text="7"
-                        android:textColor="@android:color/white"
-                        android:textSize="26sp" />
-                </FrameLayout>
-
-                <FrameLayout
+                <Button
+                    android:id="@+id/btn8"
+                    style="@style/AppTheme.Button"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@android:color/holo_orange_light">
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="onClickNumber"
+                    android:text="8"
+                    android:textColor="@android:color/white"
+                    android:textSize="26sp" />
 
-                    <Button
-                        android:id="@+id/btn8"
-                        style="@style/AppTheme.Button"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="?android:attr/selectableItemBackgroundBorderless"
-                        android:onClick="onClickNumber"
-                        android:text="8"
-                        android:textColor="@android:color/white"
-                        android:textSize="26sp" />
-                </FrameLayout>
-
-                <FrameLayout
+                <Button
+                    android:id="@+id/btn9"
+                    style="@style/AppTheme.Button"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@android:color/holo_orange_light">
-
-                    <Button
-                        android:id="@+id/btn9"
-                        style="@style/AppTheme.Button"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="?android:attr/selectableItemBackgroundBorderless"
-                        android:onClick="onClickNumber"
-                        android:text="9"
-                        android:textColor="@android:color/white"
-                        android:textSize="26sp" />
-                </FrameLayout>
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="onClickNumber"
+                    android:text="9"
+                    android:textColor="@android:color/white"
+                    android:textSize="26sp" />
 
             </LinearLayout>
 
@@ -164,61 +147,44 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
                 android:layout_weight="1"
+                android:background="@android:color/holo_red_light"
                 android:orientation="horizontal">
 
-                <FrameLayout
+                <Button
+                    android:id="@+id/btn1"
+                    style="@style/AppTheme.Button"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@android:color/holo_red_light">
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="onClickNumber"
+                    android:text="1"
+                    android:textColor="@android:color/white"
+                    android:textSize="26sp" />
 
-                    <Button
-                        android:id="@+id/btn1"
-                        style="@style/AppTheme.Button"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="?android:attr/selectableItemBackgroundBorderless"
-                        android:onClick="onClickNumber"
-                        android:text="1"
-                        android:textColor="@android:color/white"
-                        android:textSize="26sp" />
-                </FrameLayout>
-
-                <FrameLayout
+                <Button
+                    android:id="@+id/btn2"
+                    style="@style/AppTheme.Button"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@android:color/holo_red_light">
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="onClickNumber"
+                    android:text="2"
+                    android:textColor="@android:color/white"
+                    android:textSize="26sp" />
 
-                    <Button
-                        android:id="@+id/btn2"
-                        style="@style/AppTheme.Button"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="?android:attr/selectableItemBackgroundBorderless"
-                        android:onClick="onClickNumber"
-                        android:text="2"
-                        android:textColor="@android:color/white"
-                        android:textSize="26sp" />
-                </FrameLayout>
-
-                <FrameLayout
+                <Button
+                    android:id="@+id/btn3"
+                    style="@style/AppTheme.Button"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@android:color/holo_red_light">
-
-                    <Button
-                        android:id="@+id/btn3"
-                        style="@style/AppTheme.Button"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="?android:attr/selectableItemBackgroundBorderless"
-                        android:onClick="onClickNumber"
-                        android:text="3"
-                        android:textColor="@android:color/white"
-                        android:textSize="26sp" />
-                </FrameLayout>
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="onClickNumber"
+                    android:text="3"
+                    android:textColor="@android:color/white"
+                    android:textSize="26sp" />
 
             </LinearLayout>
 
