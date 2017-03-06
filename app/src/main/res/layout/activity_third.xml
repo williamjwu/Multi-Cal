@@ -12,12 +12,12 @@
         android:id="@+id/toolbar_third"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:background="?attr/colorPrimary"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/darker_gray"
         android:minHeight="?attr/actionBarSize"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark" />
 
     <LinearLayout
         android:orientation="vertical"
