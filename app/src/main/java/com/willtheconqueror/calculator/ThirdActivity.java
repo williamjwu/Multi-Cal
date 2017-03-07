@@ -103,7 +103,8 @@ public class ThirdActivity extends AppCompatActivity {
                 updateScreen();
             }
             catch(NumberFormatException ex) {
-                displayValue = "Invalid Input";
+                displayValue = "Error";
+                Toast.makeText(ThirdActivity.this, "Please input a valid number", Toast.LENGTH_SHORT).show();
                 updateScreen();
             }
             btnEnter.setText("clear");
@@ -118,6 +119,9 @@ public class ThirdActivity extends AppCompatActivity {
 
     protected void onClickNumber(View v) {
         Button b = (Button) v;
+        if (displayValue.equals("0")) {
+            displayValue = "";
+        }
         displayValue += b.getText();
         if (displayValue.length() > 9) {
             displayValue = displayValue.substring(0, 9);
