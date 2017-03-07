@@ -42,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar actionToolbar = (Toolbar)findViewById(R.id.toolbar_main);
         setSupportActionBar(actionToolbar);
+        //disable title on action bar
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
     }
 
     @Override
