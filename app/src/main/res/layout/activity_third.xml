@@ -5,7 +5,7 @@
     android:id="@+id/activity_third"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/material.grey"
+    android:background="@android:color/darker_gray"
     tools:context="com.willtheconqueror.calculator.ThirdActivity">
 
     <android.support.v7.widget.Toolbar
