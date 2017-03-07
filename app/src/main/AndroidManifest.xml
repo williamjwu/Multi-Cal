@@ -18,15 +18,15 @@
         </activity>
         <activity
             android:name=".SecondActivity"
-            android:label=""
+            android:label="Quadratic formula"
             android:screenOrientation="portrait"/>
         <activity
             android:name=".ThirdActivity"
-            android:label=""
+            android:label="Binary mode"
             android:screenOrientation="portrait"/>
         <activity
             android:name=".FourthActivity"
-            android:label=""
+            android:label="Hexadecimal mode"
             android:screenOrientation="portrait"/>
     </application>
 

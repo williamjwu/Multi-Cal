@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
             //prevent adding a second "." in the display
             displayValue += b.getText();
             ifUserInputting = true;
-            switchClearAndDelete();
+            switchClearOrDelete();
         }
         if (displayValue.length() > 11) {
             displayValue = displayValue.substring(0, 11);
@@ -136,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
         checkIfInput();
     }
 
-    private void switchClearAndDelete() {
+    private void switchClearOrDelete() {
         if (ifUserInputting) {
             btnClear.setText("DEL");
         }
@@ -177,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
                     updateScreen();
                     clearInfo();
                     ifUserInputting = false;
-                    switchClearAndDelete();
+                    switchClearOrDelete();
                 }
                 else {
                     displayValue = Double.toString(calculator.divide());
@@ -220,7 +220,7 @@ public class MainActivity extends AppCompatActivity {
             chooseOperation();
             displayValue = "0";
             ifUserInputting = false;
-            switchClearAndDelete();
+            switchClearOrDelete();
         }
     }
 
@@ -262,14 +262,14 @@ public class MainActivity extends AppCompatActivity {
             clearInfo();
             restorePreviousResult();
             ifUserInputting = false;
-            switchClearAndDelete();
+            switchClearOrDelete();
         }
         catch (IllegalArgumentException ex) {
             displayValue = "Error";
             updateScreen();
             clearInfo();
             ifUserInputting = false;
-            switchClearAndDelete();
+            switchClearOrDelete();
         }
     }
 

@@ -15,4 +15,6 @@
     <color name="material.orange">#ffff8800</color>
     <color name="material.A400">#1de9b6</color>
     <color name="material.grey_700">#616161</color>
+    <color name="material.blue.700">#1976D2</color>
+    <color name="material.blue.800">#1565C0</color>
 </resources>
