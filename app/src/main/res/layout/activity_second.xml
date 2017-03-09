@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="start"
-    tools:context="com.willtheconqueror.calculator.SecondActivity"
+    tools:context="com.williamwu2049.calculator.SecondActivity"
     android:background="@android:color/darker_gray">
 
     <android.support.v7.widget.Toolbar
