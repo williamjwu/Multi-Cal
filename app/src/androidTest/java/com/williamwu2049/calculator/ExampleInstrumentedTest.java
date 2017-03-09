@@ -1,4 +1,4 @@
-package com.willtheconqueror.calculator;
+package com.williamwu2049.calculator;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

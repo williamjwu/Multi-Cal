@@ -1,4 +1,4 @@
-package com.willtheconqueror.calculator;
+package com.williamwu2049.calculator;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
