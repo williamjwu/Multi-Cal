@@ -43,7 +43,12 @@ public class MainActivity extends AppCompatActivity {
         Toolbar actionToolbar = (Toolbar)findViewById(R.id.toolbar_main);
         setSupportActionBar(actionToolbar);
         //disable title on action bar
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        try {
+            getSupportActionBar().setDisplayShowTitleEnabled(false);
+        }
+        catch (NullPointerException ex) {
+            Toast.makeText(MainActivity.this, "Fails to disable title", Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override
@@ -90,8 +95,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void clearInfo() {
-        firstInput = 0.;
-        secondInput = 0.;
+        firstInput = 0;
+        secondInput = 0;
         displayValue = "";
         getOperator = "";
     }
@@ -174,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
                 restorePreviousResult();
                 break;
             case "÷":
-                if (secondInput == 0.) {
+                if (secondInput == 0) {
                     displayValue = "Error";
                     updateScreen();
                     clearInfo();
@@ -208,13 +213,13 @@ public class MainActivity extends AppCompatActivity {
 
     protected void onClickOperator(View v) {
         Button b = (Button)v;
-        if (!getOperator.equals("") && secondInput != 0.) {
+        if (!getOperator.equals("") && secondInput != 0) {
             chooseOperation();
         }
         getOperator = b.getText().toString();
         displayValue = b.getText().toString();
         updateScreen();
-        displayValue = "";
+        displayValue = "0";
     }
 
     protected void onClickEqual(View v) {
@@ -231,8 +236,8 @@ public class MainActivity extends AppCompatActivity {
         String label = b.getText().toString();
         switch (label) {
             case "CLR":
-                firstInput = 0.;
-                secondInput = 0.;
+                firstInput = 0;
+                secondInput = 0;
                 displayValue = "0";
                 updateScreen();
                 getOperator = "";
