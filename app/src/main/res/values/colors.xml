@@ -25,4 +25,7 @@
     <color name="numeric_button">#122D4A</color>
     <color name="text_view">#1155C4</color>
     <color name="operation_button">#122D42</color>
+    <color name="equal_button">#FBC02D</color>
+    <color name="clear_button">#F50057</color>
+
 </resources>
