@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="@color/material.blue.600"
+        android:background="@color/text_view"
         android:minHeight="?attr/actionBarSize"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:theme="@style/ThemeOverlay.AppCompat.Dark" />
@@ -30,18 +30,18 @@
         android:layout_alignParentStart="true">
 
         <TextView
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:id="@+id/textView2"
+            android:background="@color/text_view"
+            android:gravity="bottom|end"
             android:maxLines="2"
             android:paddingEnd="5dp"
             android:scrollHorizontally="true"
             android:textColor="@android:color/background_light"
-            android:background="@color/material.blue.600"
-            android:textSize="50sp"
 
-            android:gravity="bottom|end"/>
+            android:textSize="50sp" />
 
     <LinearLayout
         android:orientation="vertical"
