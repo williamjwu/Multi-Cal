@@ -242,7 +242,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="1dp"
                 android:layout_weight="1"
-                android:background="@color/material.grey">
+                android:background="@color/numeric_button">
 
                 <Button
                     android:id="@+id/btn2"
@@ -261,7 +261,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="1dp"
                 android:layout_weight="1"
-                android:background="@color/material.grey">
+                android:background="@color/numeric_button">
 
                 <Button
                     android:id="@+id/btn3"
@@ -308,7 +308,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/material.grey">
+                android:background="@color/numeric_button">
 
                 <Button
                     android:id="@+id/btnClear"
@@ -325,10 +325,9 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="1dp"
                 android:layout_marginStart="1dp"
                 android:layout_weight="1"
-                android:background="@color/material.grey">
+                android:background="@color/numeric_button">
 
                 <Button
                     android:id="@+id/btn0"
@@ -348,7 +347,7 @@
                 android:layout_marginLeft="1dp"
                 android:layout_marginStart="1dp"
                 android:layout_weight="1"
-                android:background="@color/material.grey">
+                android:background="@color/numeric_button">
 
                 <Button
                     android:id="@+id/btnEqual"
@@ -394,7 +393,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/material.grey">
+                android:background="@color/numeric_button">
 
                 <Button
                     android:id="@+id/btnSquare"
@@ -413,7 +412,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="1dp"
                 android:layout_weight="1"
-                android:background="@color/material.grey">
+                android:background="@color/numeric_button">
 
                 <Button
                     android:id="@+id/btnDot"
@@ -432,7 +431,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="1dp"
                 android:layout_weight="1"
-                android:background="@color/material.grey">
+                android:background="@color/numeric_button">
 
                 <Button
                     android:id="@+id/btnSqrt"
