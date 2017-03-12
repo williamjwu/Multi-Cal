@@ -17,4 +17,12 @@
     <color name="material.grey_700">#616161</color>
     <color name="material.blue.700">#1976D2</color>
     <color name="material.blue.800">#1565C0</color>
+    <color name="material.indigo.500">#3F51B5</color>
+    <color name="material.indigo.600">#3949AB</color>
+    <color name="material.indigo.700">#303F9F</color>
+
+    <!-- calculator used color -->
+    <color name="numeric_button">#122D4A</color>
+    <color name="text_view">#1155C4</color>
+    <color name="operation_button">#122D42</color>
 </resources>
