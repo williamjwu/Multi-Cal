@@ -7,4 +7,19 @@
     <string name="menu_action_toBinary">Binary</string>
     <string name="menu_action_toHexadecimal">Hexadecimal</string>
     <string name="menu_action_toMain">Main Function</string>
+    <string name="num_3">3</string>
+    <string name="num_2">2</string>
+    <string name="num_1">1</string>
+    <string name="op_minus">-</string>
+    <string name="num_6">6</string>
+    <string name="num_5">5</string>
+    <string name="num_4">4</string>
+    <string name="op_multiply">×</string>
+    <string name="num_9">9</string>
+    <string name="num_8">8</string>
+    <string name="num_7">7</string>
+    <string name="op_divide">÷</string>
+    <string name="op_remain">%</string>
+    <string name="op_NegPos">-/+</string>
+    <string name="op_sqrt">√</string>
 </resources>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.williamwu2049.calculator.MainActivity"
-    android:background="@android:color/darker_gray">
+    android:background="@color/material.darker_grey"
+    tools:context="com.williamwu2049.calculator.MainActivity">
 
 
     <android.support.v7.widget.Toolbar
@@ -15,428 +15,469 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="@color/material.blue.600"
+        android:background="@color/text_view"
         android:minHeight="?attr/actionBarSize"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:theme="@style/ThemeOverlay.AppCompat.Dark" />
 
     <LinearLayout
-        android:orientation="vertical"
+        android:id="@+id/screen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/screen"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/toolbar_main"
-        android:layout_alignParentStart="true">
-    <TextView
-        android:text="0"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingEnd="5dp"
-        android:id="@+id/textView"
-        android:maxLines="1"
-        android:layout_weight="1.5"
-        android:textColor="@android:color/background_light"
-        android:background="@color/material.blue.600"
-        android:gravity="bottom|end"
-        android:textSize="60sp" />
+        android:orientation="vertical">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:paddingTop="1dp"
-        android:id="@+id/Row1">
-
-        <FrameLayout
+        <TextView
+            android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/material.grey"
-            android:layout_weight="1">
-                <Button
-                    android:text="7"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/btn7"
-                    android:textSize="26sp"
-                    android:onClick="onClickNumber"
-                    style="@style/AppTheme.Button"
-                    android:background="?android:attr/selectableItemBackgroundBorderless" />
-        </FrameLayout>
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:background="@color/text_view"
+            android:gravity="bottom|end"
+            android:maxLines="1"
+            android:paddingEnd="5dp"
+            android:text="0"
+            android:textColor="@android:color/background_light"
+            android:textSize="60sp" />
 
-        <FrameLayout
+        <LinearLayout
+            android:id="@+id/Row1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/material.grey"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginLeft="1dp"
-            android:layout_marginStart="1dp">
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/clear_button">
+
                 <Button
-                    android:text="8"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/btn8"
-                    android:textSize="26sp"
-                    android:onClick="onClickNumber"
-                    style="@style/AppTheme.Button"
-                    android:background="?android:attr/selectableItemBackgroundBorderless" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/material.grey"
-            android:layout_weight="1"
-            android:layout_marginLeft="1dp"
-            android:layout_marginStart="1dp">
-                <Button
-                    android:text="9"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/btn9"
-                    android:textSize="26sp"
-                    android:onClick="onClickNumber"
-                    style="@style/AppTheme.Button"
-                    android:background="?android:attr/selectableItemBackgroundBorderless" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/material.orange"
-            android:layout_weight="1"
-            android:layout_marginLeft="1dp"
-            android:layout_marginStart="1dp">
-                <Button
-                    android:text="÷"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/btnDivide"
-                    android:textSize="26sp"
-                    android:textColor="@android:color/white"
-                    android:onClick="onClickOperator"
-                    android:background="?android:attr/selectableItemBackgroundBorderless" />
-        </FrameLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/Row2"
-        android:layout_marginTop="1dp"
-        android:layout_weight="1">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/material.grey"
-            android:layout_weight="1">
-                <Button
-                    android:text="4"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/btn4"
-                    android:textSize="26sp"
-                    android:onClick="onClickNumber"
-                    style="@style/AppTheme.Button"
-                    android:background="?android:attr/selectableItemBackgroundBorderless" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/material.grey"
-            android:layout_weight="1"
-            android:layout_marginLeft="1dp"
-            android:layout_marginStart="1dp">
-                <Button
-                    android:text="5"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/btn5"
-                    android:textSize="26sp"
-                    android:onClick="onClickNumber"
-                    style="@style/AppTheme.Button"
-                    android:background="?android:attr/selectableItemBackgroundBorderless" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/material.grey"
-            android:layout_weight="1"
-            android:layout_marginLeft="1dp"
-            android:layout_marginStart="1dp">
-                <Button
-                    android:text="6"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/btn6"
-                    android:textSize="26sp"
-                    android:onClick="onClickNumber"
-                    style="@style/AppTheme.Button"
-                    android:background="?android:attr/selectableItemBackgroundBorderless" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/material.orange"
-            android:layout_weight="1"
-            android:layout_marginLeft="1dp"
-            android:layout_marginStart="1dp">
-                <Button
-                    android:text="×"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/btnMultiply"
-                    android:background="?android:attr/selectableItemBackgroundBorderless"
-                    android:textSize="26sp"
-                    android:textColor="@android:color/white"
-                    android:onClick="onClickOperator" />
-        </FrameLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:layout_marginTop="1dp"
-        android:id="@+id/Row3">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/material.grey"
-            android:layout_weight="1">
-                <Button
-                    android:text="1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/btn1"
-                    android:textSize="26sp"
-                    android:onClick="onClickNumber"
-                    style="@style/AppTheme.Button"
-                    android:background="?android:attr/selectableItemBackgroundBorderless" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/material.grey"
-            android:layout_weight="1"
-            android:layout_marginLeft="1dp"
-            android:layout_marginStart="1dp">
-                <Button
-                    android:text="2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/btn2"
-                    android:textSize="26sp"
-                    android:onClick="onClickNumber"
-                    style="@style/AppTheme.Button"
-                    android:background="?android:attr/selectableItemBackgroundBorderless" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/material.grey"
-            android:layout_weight="1"
-            android:layout_marginLeft="1dp"
-            android:layout_marginStart="1dp">
-                <Button
-                    android:text="3"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/btn3"
-                    android:textSize="26sp"
-                    android:onClick="onClickNumber"
-                    style="@style/AppTheme.Button"
-                    android:background="?android:attr/selectableItemBackgroundBorderless" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/material.orange"
-            android:layout_weight="1"
-            android:layout_marginLeft="1dp"
-            android:layout_marginStart="1dp">
-                <Button
-                    android:text="-"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/btnMinus"
-                    android:background="?android:attr/selectableItemBackgroundBorderless"
-                    android:textSize="26sp"
-                    android:textColor="@android:color/white"
-                    android:onClick="onClickOperator" />
-        </FrameLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:layout_marginTop="1dp"
-        android:id="@+id/Row4">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/material.grey"
-            android:layout_weight="1">
-                <Button
-                    android:text="CLR"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
                     android:id="@+id/btnClear"
-                    android:textSize="19sp"
+                    style="@style/AppTheme.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
                     android:onClick="onClickClear"
-                    style="@style/AppTheme.Button"
-                    android:background="?android:attr/selectableItemBackgroundBorderless" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/material.grey"
-            android:layout_weight="1"
-            android:layout_marginLeft="1dp"
-            android:layout_marginStart="1dp">
-                <Button
-                    android:text="0"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/btn0"
-                    android:textSize="26sp"
-                    android:onClick="onClickNumber"
-                    style="@style/AppTheme.Button"
-                    android:background="?android:attr/selectableItemBackgroundBorderless" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/material.grey"
-            android:layout_weight="1"
-            android:layout_marginLeft="1dp"
-            android:layout_marginStart="1dp">
-                <Button
-                    android:text="="
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/btnEqual"
-                    android:textSize="26sp"
-                    android:onClick="onClickEqual"
-                    style="@style/AppTheme.Button"
-                    android:background="?android:attr/selectableItemBackgroundBorderless" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/material.orange"
-            android:layout_weight="1"
-            android:layout_marginLeft="1dp"
-            android:layout_marginStart="1dp">
-                <Button
-                    android:text="+"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/btnPlus"
-                    android:background="?android:attr/selectableItemBackgroundBorderless"
-                    android:textSize="26sp"
+                    android:text="CLR"
                     android:textColor="@android:color/white"
-                    android:onClick="onClickOperator" />
-        </FrameLayout>
-    </LinearLayout>
+                    android:textSize="19sp" />
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:layout_marginTop="1dp"
-        android:id="@+id/Row5">
+            </FrameLayout>
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/material.grey"
-            android:layout_weight="1">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="1dp"
+                android:layout_weight="1"
+                android:background="@color/operation_button">
+
                 <Button
-                    android:text="x²"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/btnSquare"
-                    android:onClick="onClickSquare"
-                    android:textSize="21sp"
-                    style="@style/AppTheme.Button"
-                    android:background="?android:attr/selectableItemBackgroundBorderless" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/material.grey"
-            android:layout_weight="1"
-            android:layout_marginLeft="1dp"
-            android:layout_marginStart="1dp">
-                <Button
-                    android:text="."
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/btnDot"
-                    android:textSize="26sp"
-                    android:onClick="onClickNumber"
-                    style="@style/AppTheme.Button"
-                    android:background="?android:attr/selectableItemBackgroundBorderless" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/material.grey"
-            android:layout_weight="1"
-            android:layout_marginLeft="1dp"
-            android:layout_marginStart="1dp">
-                <Button
-                    android:text="√"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
                     android:id="@+id/btnSqrt"
-                    android:textSize="26sp"
-                    android:onClick="onClickSqrt"
                     style="@style/AppTheme.Button"
-                    android:background="?android:attr/selectableItemBackgroundBorderless" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/material.orange"
-            android:layout_weight="1"
-            android:layout_marginLeft="1dp"
-            android:layout_marginStart="1dp">
-                <Button
-                    android:text="%"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/btnRemain"
                     android:background="?android:attr/selectableItemBackgroundBorderless"
-                    android:textSize="26sp"
+                    android:onClick="onClickSqrt"
+                    android:text="@string/op_sqrt"
                     android:textColor="@android:color/white"
-                    android:onClick="onClickOperator" />
-        </FrameLayout>
-    </LinearLayout>
+                    android:textSize="28sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="1dp"
+                android:layout_weight="1"
+                android:background="@color/operation_button">
+
+                <Button
+                    android:id="@+id/btnRemain"
+                    style="@style/AppTheme.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="onClickOperator"
+                    android:text="@string/op_remain"
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="1dp"
+                android:layout_weight="1"
+                android:background="@color/operation_button">
+
+                <Button
+                    android:id="@+id/btnDivide"
+                    style="@style/AppTheme.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="onClickOperator"
+                    android:text="@string/op_divide"
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Row2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/numeric_button">
+
+                <Button
+                    android:id="@+id/btn7"
+                    style="@style/AppTheme.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="onClickNumber"
+                    android:text="@string/num_7"
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="1dp"
+                android:layout_weight="1"
+                android:background="@color/numeric_button">
+
+                <Button
+                    android:id="@+id/btn8"
+                    style="@style/AppTheme.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="onClickNumber"
+                    android:text="@string/num_8"
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="1dp"
+                android:layout_weight="1"
+                android:background="@color/numeric_button">
+
+                <Button
+                    android:id="@+id/btn9"
+                    style="@style/AppTheme.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="onClickNumber"
+                    android:text="@string/num_9"
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="1dp"
+                android:layout_weight="1"
+                android:background="@color/operation_button">
+
+                <Button
+                    android:id="@+id/btnMultiply"
+                    style="@style/AppTheme.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="onClickOperator"
+                    android:text="@string/op_multiply"
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Row3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/numeric_button">
+
+                <Button
+                    android:id="@+id/btn4"
+                    style="@style/AppTheme.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="onClickNumber"
+                    android:text="@string/num_4"
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="1dp"
+                android:layout_weight="1"
+                android:background="@color/numeric_button">
+
+                <Button
+                    android:id="@+id/btn5"
+                    style="@style/AppTheme.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="onClickNumber"
+                    android:text="@string/num_5"
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="1dp"
+                android:layout_weight="1"
+                android:background="@color/numeric_button">
+
+                <Button
+                    android:id="@+id/btn6"
+                    style="@style/AppTheme.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="onClickNumber"
+                    android:text="@string/num_6"
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="1dp"
+                android:layout_weight="1"
+                android:background="@color/operation_button">
+
+                <Button
+                    android:id="@+id/btnMinus"
+                    style="@style/AppTheme.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="onClickOperator"
+                    android:text="@string/op_minus"
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Row4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/numeric_button">
+
+                <Button
+                    android:id="@+id/btn1"
+                    style="@style/AppTheme.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="onClickNumber"
+                    android:text="@string/num_1"
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="1dp"
+                android:layout_weight="1"
+                android:background="@color/numeric_button">
+
+                <Button
+                    android:id="@+id/btn2"
+                    style="@style/AppTheme.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="onClickNumber"
+                    android:text="@string/num_2"
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="1dp"
+                android:layout_weight="1"
+                android:background="@color/numeric_button">
+
+                <Button
+                    android:id="@+id/btn3"
+                    style="@style/AppTheme.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="onClickNumber"
+                    android:text="@string/num_3"
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="1dp"
+                android:layout_weight="1"
+                android:background="@color/operation_button">
+
+                <Button
+                    android:id="@+id/btnPlus"
+                    style="@style/AppTheme.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="onClickOperator"
+                    android:text="+"
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Row5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/numeric_button">
+
+                <Button
+                    android:id="@+id/btnDot"
+                    style="@style/AppTheme.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="onClickNumber"
+                    android:text="."
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="1dp"
+                android:layout_weight="1"
+                android:background="@color/numeric_button">
+
+                <Button
+                    android:id="@+id/btn0"
+                    style="@style/AppTheme.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="onClickNumber"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="1dp"
+                android:layout_weight="1"
+                android:background="@color/numeric_button">
+
+                <Button
+                    android:id="@+id/btnNegPos"
+                    style="@style/AppTheme.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="onClickSignSwitch"
+                    android:text="@string/op_NegPos"
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="1dp"
+                android:layout_weight="1"
+                android:background="@color/equal_button">
+
+                <Button
+                    android:id="@+id/btnEqual"
+                    style="@style/AppTheme.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="onClickEqual"
+                    android:text="="
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp" />
+
+            </FrameLayout>
+        </LinearLayout>
 
 
     </LinearLayout>

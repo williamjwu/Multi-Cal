@@ -4,11 +4,12 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
 
-        <item name="android:statusBarColor">@color/material.blue.800</item>
-        <item name="android:navigationBarColor">?android:attr/colorAccent</item>
+        <item name="android:statusBarColor">@color/text_view</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
         <item name="colorAccent">@color/material.blue.800</item>
     </style>
     <style name="AppTheme.Button" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:fontFamily">sans-serif-light</item>
         <item name="colorButtonNormal">@color/material.grey</item>
         <item name="android:textColor">@color/material.blue.600</item>
     </style>
