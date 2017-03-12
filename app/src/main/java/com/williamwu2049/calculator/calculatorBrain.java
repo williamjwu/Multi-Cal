@@ -19,7 +19,7 @@ public class calculatorBrain {
 
     //mutator
     public double add() {
-        return Math.round(firstInput + secondInput);
+        return firstInput + secondInput;
     }
     public double minus() {
         return firstInput - secondInput;
