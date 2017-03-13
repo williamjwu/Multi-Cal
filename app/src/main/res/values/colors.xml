@@ -2,7 +2,6 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
     <color name="material.blue">#2a8fe1</color>
     <color name="material.grey">#d3d3d3</color>
     <color name="material.light_dark">#dddddd</color>
@@ -23,9 +22,13 @@
 
     <!-- calculator used color -->
     <color name="numeric_button">#122D4A</color>
+    <color name="pressed_numeric_button">#FF214E7F</color>
     <color name="text_view">#1155C4</color>
     <color name="operation_button">#122D42</color>
-    <color name="equal_button">#FBC02D</color>
+    <color name="pressed_operation_button">#FF1E4773</color>
+    <color name="equal_button">#FFD740</color>
+    <color name="pressed_equal_button">#FFFF00</color>
     <color name="clear_button">#F50057</color>
+    <color name="pressed_clear_button">#FF4081</color>
 
 </resources>

@@ -22,4 +22,5 @@
     <string name="op_remain">%</string>
     <string name="op_NegPos">-/+</string>
     <string name="op_sqrt">√</string>
+    <string name="op_clr">CLR</string>
 </resources>
