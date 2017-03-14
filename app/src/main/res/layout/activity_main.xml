@@ -30,17 +30,22 @@
 
         <TextView
             android:id="@+id/textView"
+            android:paddingTop="24dp"
+            android:paddingBottom="14dp"
+            android:paddingLeft="14dp"
+            android:paddingStart="14dp"
+            android:paddingRight="14dp"
+            android:paddingEnd="14dp"
+            android:textSize="48sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1.5"
             android:background="@color/text_view"
             android:gravity="bottom|end"
             android:maxLines="1"
-            android:paddingEnd="5dp"
             android:text="@string/start_number"
             android:fontFamily="sans-serif-light"
-            android:textColor="@android:color/background_light"
-            android:textSize="60sp" />
+            android:textColor="@android:color/background_light"/>
 
         <LinearLayout
             android:id="@+id/Row1"
