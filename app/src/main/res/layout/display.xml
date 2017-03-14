@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:editable="false"
         android:inputType="none"
-        android:textColor="@android:color/white"
+        android:textColor="@color/display_formula_text_color"
         android:textIsSelectable="true" />
 
     <com.williamwu2049.calculator.CalculatorEditText
