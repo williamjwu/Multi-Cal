@@ -31,6 +31,7 @@
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:fontFamily="sans-serif-light"
             android:layout_weight="1"
             android:background="@color/text_view"
             android:gravity="bottom|end"
