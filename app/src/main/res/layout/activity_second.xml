@@ -33,6 +33,7 @@
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:fontFamily="sans-serif-light"
             android:layout_weight="1"
             android:background="@color/text_view"
             android:gravity="bottom|end"
@@ -60,6 +61,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:fontFamily="sans-serif-light"
             android:text="@string/enter_a_text_view"
             android:textColor="@android:color/background_light"
             android:textSize="23sp"
@@ -70,6 +72,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:fontFamily="sans-serif-light"
             android:id="@+id/user_input_a"
             android:background="@android:color/holo_orange_light"
             android:textColor="@android:color/background_light"
@@ -87,6 +90,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:fontFamily="sans-serif-light"
             android:text="@string/enter_b_text_view"
             android:textColor="@android:color/background_light"
             android:textSize="23sp"
@@ -97,6 +101,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:fontFamily="sans-serif-light"
             android:id="@+id/user_input_b"
             android:background="@android:color/holo_orange_dark"
             android:textColor="@android:color/background_light"
@@ -114,6 +119,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:fontFamily="sans-serif-light"
             android:text="@string/enter_c_text_view"
             android:textColor="@android:color/background_light"
             android:textSize="23sp"
@@ -124,6 +130,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:fontFamily="sans-serif-light"
             android:id="@+id/user_input_c"
             android:background="@android:color/holo_red_light"
             android:textColor="@android:color/background_light"
@@ -144,6 +151,7 @@
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:fontFamily="sans-serif-light"
                         android:id="@+id/btnEnter"
                         android:textColor="@color/material.grey"
                         android:background="?android:attr/selectableItemBackgroundBorderless"

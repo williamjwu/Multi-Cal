@@ -23,4 +23,5 @@
     <string name="op_NegPos">-/+</string>
     <string name="op_sqrt">√</string>
     <string name="op_clr">CLR</string>
+    <string name="start_number">0</string>
 </resources>
