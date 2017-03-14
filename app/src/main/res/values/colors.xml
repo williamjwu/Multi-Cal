@@ -30,5 +30,7 @@
     <color name="pressed_equal_button">#FFFF00</color>
     <color name="clear_button">#F50057</color>
     <color name="pressed_clear_button">#FF4081</color>
+    <!-- Text color for the result in the calculator display. -->
+    <color name="display_result_text_color">#6C000000</color>
 
 </resources>
