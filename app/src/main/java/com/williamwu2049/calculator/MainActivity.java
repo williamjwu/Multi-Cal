@@ -110,13 +110,12 @@ public class MainActivity extends AppCompatActivity {
         firstInput = pendingValue;
     }
 
-    private void switchInputtingPlace() {
-        if (getOperator.equals("")) {
-            firstInput = Double.parseDouble(displayValue);
-        }
-        else {
-            secondInput = Double.parseDouble(displayValue);
-        }
+    private void inputTofirstInput() {
+        firstInput = Double.parseDouble(displayValue);
+    }
+
+    private void inputTosecondInput() {
+        secondInput = Double.parseDouble(displayValue);
     }
 
     protected void onClickNumber(View v) {
@@ -141,7 +140,6 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this, "You have reached the input limit", Toast.LENGTH_SHORT).show();
         }
         updateScreen();
-        switchInputtingPlace();
     }
 
     private void switchClearOrDelete() {
@@ -213,6 +211,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     protected void onClickOperator(View v) {
+        inputTofirstInput();
         Button b = (Button)v;
         if (!getOperator.equals("") && secondInput != 0) {
             chooseOperation();
@@ -225,6 +224,7 @@ public class MainActivity extends AppCompatActivity {
 
     protected void onClickEqual(View v) {
         if (!getOperator.equals("")) {
+            inputTosecondInput();
             chooseOperation();
             displayValue = "0";
             ifUserInputting = false;
@@ -247,26 +247,22 @@ public class MainActivity extends AppCompatActivity {
                 if (displayValue.length() > 2) {
                     displayValue = displayValue.substring(0, displayValue.length() - 1);
                     updateScreen();
-                    switchInputtingPlace();
                 }
                 else if (displayValue.length() == 2) {
                     if (displayValue.startsWith("-")) {
                         displayValue = "0";
                         btnClear.setText("CLR");
                         updateScreen();
-                        switchInputtingPlace();
                     }
                     else {
                         displayValue = displayValue.substring(0, displayValue.length() - 1);
                         updateScreen();
-                        switchInputtingPlace();
                     }
                 }
                 else if (displayValue.length() == 1) {
                     displayValue = "0";
                     btnClear.setText("CLR");
                     updateScreen();
-                    switchInputtingPlace();
                 }
                 break;
         }
