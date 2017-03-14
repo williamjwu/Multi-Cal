@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     double pendingValue;
     Button btnClear;
     Boolean ifUserInputting = true;
+    Boolean signSwitchState = true; // false for positive sign, true for no sign
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,13 +110,12 @@ public class MainActivity extends AppCompatActivity {
         firstInput = pendingValue;
     }
 
-    private void checkIfInput() {
-        if (getOperator.equals("")) {
-            firstInput = Double.parseDouble(displayValue);
-        }
-        else {
-            secondInput = Double.parseDouble(displayValue);
-        }
+    private void inputTofirstInput() {
+        firstInput = Double.parseDouble(displayValue);
+    }
+
+    private void inputTosecondInput() {
+        secondInput = Double.parseDouble(displayValue);
     }
 
     protected void onClickNumber(View v) {
@@ -140,7 +140,6 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this, "You have reached the input limit", Toast.LENGTH_SHORT).show();
         }
         updateScreen();
-        checkIfInput();
     }
 
     private void switchClearOrDelete() {
@@ -212,6 +211,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     protected void onClickOperator(View v) {
+        inputTofirstInput();
         Button b = (Button)v;
         if (!getOperator.equals("") && secondInput != 0) {
             chooseOperation();
@@ -224,6 +224,7 @@ public class MainActivity extends AppCompatActivity {
 
     protected void onClickEqual(View v) {
         if (!getOperator.equals("")) {
+            inputTosecondInput();
             chooseOperation();
             displayValue = "0";
             ifUserInputting = false;
@@ -243,42 +244,51 @@ public class MainActivity extends AppCompatActivity {
                 getOperator = "";
                 break;
             case "DEL":
-                if (displayValue.length() > 1) {
+                if (displayValue.length() > 2) {
                     displayValue = displayValue.substring(0, displayValue.length() - 1);
                     updateScreen();
-                    checkIfInput();
+                }
+                else if (displayValue.length() == 2) {
+                    if (displayValue.startsWith("-")) {
+                        displayValue = "0";
+                        btnClear.setText("CLR");
+                        updateScreen();
+                    }
+                    else {
+                        displayValue = displayValue.substring(0, displayValue.length() - 1);
+                        updateScreen();
+                    }
                 }
                 else if (displayValue.length() == 1) {
                     displayValue = "0";
                     btnClear.setText("CLR");
                     updateScreen();
-                    checkIfInput();
                 }
                 break;
         }
 
     }
 
-    protected void onClickSquare(View v) {
-        //cast the output
-        DecimalFormat formatDouble = new DecimalFormat("#.#######");
-        try {
-            displayValue = Double.toString(Double.valueOf(formatDouble.format(firstInput * firstInput)));
-            storePreviousResult();
-            updateScreen();
-            clearInfo();
-            restorePreviousResult();
-            ifUserInputting = false;
-            switchClearOrDelete();
-        }
-        catch (IllegalArgumentException ex) {
-            displayValue = "Error";
-            updateScreen();
-            clearInfo();
-            ifUserInputting = false;
-            switchClearOrDelete();
-        }
-    }
+//    protected void onClickSquare(View v) {
+//        //cast the output
+//        DecimalFormat formatDouble = new DecimalFormat("#.#######");
+//        try {
+//            displayValue = Double.toString(Double.valueOf(formatDouble.format(firstInput * firstInput)));
+//            storePreviousResult();
+//            updateScreen();
+//            clearInfo();
+//            restorePreviousResult();
+//            ifUserInputting = false;
+//            switchClearOrDelete();
+//        }
+//        catch (IllegalArgumentException ex) {
+//            displayValue = "Error";
+//            updateScreen();
+//            clearInfo();
+//            ifUserInputting = false;
+//            switchClearOrDelete();
+//        }
+//    }
 
     protected void onClickSqrt(View v) {
         //cast the output
@@ -288,6 +298,25 @@ public class MainActivity extends AppCompatActivity {
         updateScreen();
         clearInfo();
         restorePreviousResult();
+    }
+
+    protected void onClickSignSwitch(View v) {
+        if (ifUserInputting) {
+            if (!displayValue.equals("") && !displayValue.equals("0")) {
+                if (signSwitchState) {
+                    signSwitchState = false; //set state to negative sign
+                    displayValue = "-" + displayValue;
+                    updateScreen();
+                }
+                else {
+                    signSwitchState = true;
+                    if (displayValue.startsWith("-")) {
+                        displayValue = displayValue.substring(1, displayValue.length());
+                        updateScreen();
+                    }
+                }
+            }
+        }
     }
 
 }
