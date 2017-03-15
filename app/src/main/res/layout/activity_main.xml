@@ -46,7 +46,7 @@
             android:paddingEnd="10dp"
             android:gravity="bottom|end"
             android:maxLines="1"
-            autofit:minTextSize="30sp"
+            autofit:minTextSize="28sp"
             android:background="@color/text_view"
             android:elevation="4dp"
             />
