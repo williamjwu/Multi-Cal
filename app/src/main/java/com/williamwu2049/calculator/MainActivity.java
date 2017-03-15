@@ -1,8 +1,8 @@
 package com.williamwu2049.calculator;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -14,11 +14,10 @@ import android.widget.Toast;
 
 import java.text.DecimalFormat;
 
-
 public class MainActivity extends AppCompatActivity {
 
-    String displayValue = "0";
     private TextView display;
+    String displayValue = "0";
     String getOperator = "";
     double firstInput;
     double secondInput;
@@ -135,10 +134,11 @@ public class MainActivity extends AppCompatActivity {
             ifUserInputting = true;
             switchClearOrDelete();
         }
-        if (displayValue.length() > 11) {
-            displayValue = displayValue.substring(0, 11);
+        if (displayValue.length() > 18) {
+            displayValue = displayValue.substring(0, 18);
             Toast.makeText(MainActivity.this, "You have reached the input limit", Toast.LENGTH_SHORT).show();
         }
+
         updateScreen();
     }
 
