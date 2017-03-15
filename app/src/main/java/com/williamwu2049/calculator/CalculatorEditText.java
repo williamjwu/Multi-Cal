@@ -7,6 +7,7 @@ package com.williamwu2049.calculator;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Paint;
+import android.graphics.Paint.FontMetricsInt;
 import android.graphics.Rect;
 import android.os.Parcelable;
 import android.support.v7.view.ActionMode;
@@ -16,9 +17,10 @@ import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
+import android.widget.EditText;
 import android.widget.TextView;
 
-public class CalculatorEditText extends android.support.v7.widget.AppCompatTextView {
+public class CalculatorEditText extends android.support.v7.widget.AppCompatEditText {
     private final static ActionMode.Callback NO_SELECTION_ACTION_MODE_CALLBACK =
             new ActionMode.Callback() {
                 @Override
