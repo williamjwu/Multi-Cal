@@ -292,7 +292,7 @@ public class MainActivity extends AppCompatActivity {
 
     protected void onClickSqrt(View v) {
         //cast the output
-        DecimalFormat formatDouble = new DecimalFormat("#.#######");
+        DecimalFormat formatDouble = new DecimalFormat("#.############");
         displayValue = Double.toString(Double.valueOf(formatDouble.format(Math.sqrt(firstInput))));
         storePreviousResult();
         updateScreen();
