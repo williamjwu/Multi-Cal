@@ -6,3 +6,6 @@ It not only consists of a normal calculator, but also Hexadecimal/Binary convert
 
 Here is a link to my app published on Google Play:
 https://play.google.com/store/apps/details?id=com.williamwu2049.calculator
+
+# Credits
+Thanks to [Grantland Chew](https://github.com/grantland/android-autofittextview) of his excellent work for enabling auto fix text view.
