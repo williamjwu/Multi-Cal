@@ -134,18 +134,10 @@ public class MainActivity extends AppCompatActivity {
             ifUserInputting = true;
             switchClearOrDelete();
         }
-//        if (displayValue.startsWith("-")) {
-//            if (displayValue.length() > 10) {
-//                displayValue = displayValue.substring(0, 10);
-//                Toast.makeText(MainActivity.this, "You have reached the input limit", Toast.LENGTH_SHORT).show();
-//            }
-//        }
-//        else {
-//            if (displayValue.length() > 9) {
-//                displayValue = displayValue.substring(0, 9);
-//                Toast.makeText(MainActivity.this, "You have reached the input limit", Toast.LENGTH_SHORT).show();
-//            }
-//        }
+        if (displayValue.length() > 18) {
+            displayValue = displayValue.substring(0, 18);
+            Toast.makeText(MainActivity.this, "You have reached the input limit", Toast.LENGTH_SHORT).show();
+        }
 
         updateScreen();
     }
