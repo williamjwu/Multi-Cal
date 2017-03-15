@@ -25,17 +25,17 @@ public class calculatorBrain {
         return firstInput - secondInput;
     }
     public double multiply() {
-        DecimalFormat formatDouble = new DecimalFormat("#.#######");
+        DecimalFormat formatDouble = new DecimalFormat("#.############");
         return Double.valueOf(formatDouble.format(firstInput * secondInput));
     }
     public double divide() {
         //cast the output
-        DecimalFormat formatDouble = new DecimalFormat("#.#######");
+        DecimalFormat formatDouble = new DecimalFormat("#.############");
         return Double.valueOf(formatDouble.format(firstInput / secondInput));
     }
     public double remain() {
         //cast the output
-        DecimalFormat formatDouble = new DecimalFormat("#.#######");
+        DecimalFormat formatDouble = new DecimalFormat("#.############");
         return Double.valueOf(formatDouble.format(firstInput % secondInput));
     }
 }
