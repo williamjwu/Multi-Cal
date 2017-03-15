@@ -31,7 +31,7 @@ public class AutofitTextView extends android.support.v7.widget.AppCompatTextView
     }
 
     // Getters and Setters
-    
+
     @Override
     public void setTextSize(int unit, float size) {
         super.setTextSize(unit, size);

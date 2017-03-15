@@ -29,10 +29,22 @@
         android:orientation="vertical">
 
         <include
-            layout="@layout/display"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
+
+        <com.williamwu2049.calculator.AutofitTextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/start_number"
+            android:textSize="48sp"
+            android:gravity="end"
+            android:maxLines="1"
+            autofit:minTextSize="8sp"
+            />
 
         <LinearLayout
             android:id="@+id/Row1"

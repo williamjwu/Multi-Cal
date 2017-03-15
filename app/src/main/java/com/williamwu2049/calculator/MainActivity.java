@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler(this));
 
         //display
-
+        display = (TextView)findViewById(R.id.textView);
         display.setText(displayValue);
         btnClear = (Button)findViewById(R.id.btnClear);
 
