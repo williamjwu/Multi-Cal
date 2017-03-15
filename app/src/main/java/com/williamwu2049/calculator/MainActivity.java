@@ -130,23 +130,24 @@ public class MainActivity extends AppCompatActivity {
 
     protected void onClickNumber(View v) {
         Button b = (Button) v;
-        if (displayValue.equals("0")) {
-            if (!b.getText().toString().equals(".")) {
+        if (displayValue.length() <= 20) {
+            if (displayValue.equals("0")) {
+                if (!b.getText().toString().equals(".")) {
                 /*prevent crash method
                  *if not written, the first input will be "."
                  *if delete, Calculator program can crash*/
-                displayValue = "";
+                    displayValue = "";
+                }
+            }
+            if (!(displayValue.contains(".") && b.getText().toString().equals("."))) {
+                //prevent crash method
+                //prevent adding a second "." in the display
+                displayValue += b.getText();
+                ifUserInputting = true;
+                switchClearOrDelete();
             }
         }
-        if (!(displayValue.contains(".") && b.getText().toString().equals("."))) {
-            //prevent crash method
-            //prevent adding a second "." in the display
-            displayValue += b.getText();
-            ifUserInputting = true;
-            switchClearOrDelete();
-        }
-        if (displayValue.length() > 18) {
-            displayValue = displayValue.substring(0, 18);
+        else {
             Toast.makeText(MainActivity.this, "You have reached the input limit", Toast.LENGTH_SHORT).show();
         }
         handleSwitchInputTarget();
