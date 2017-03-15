@@ -15,19 +15,4 @@
         <item name="android:textColor">@color/material.blue.600</item>
     </style>
 
-    <style name="DisplayEditTextStyle" parent="@style/Widget.AppCompat.EditText">
-        <item name="android:background">@android:color/transparent</item>
-        <item name="android:cursorVisible">false</item>
-        <item name="android:fontFamily">sans-serif-light</item>
-        <item name="android:includeFontPadding">false</item>
-        <item name="android:gravity">bottom|end</item>
-        <item name="android:paddingTop">24dp</item>
-        <item name="android:paddingBottom">14dp</item>
-        <item name="android:paddingLeft">14dp</item>
-        <item name="android:paddingStart">14dp</item>
-        <item name="android:paddingRight">14dp</item>
-        <item name="android:paddingEnd">14dp</item>
-        <item name="android:textSize">48sp</item>
-    </style>
-
 </resources>
