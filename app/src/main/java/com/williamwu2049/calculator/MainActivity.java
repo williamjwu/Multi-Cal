@@ -1,8 +1,8 @@
 package com.williamwu2049.calculator;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -14,11 +14,10 @@ import android.widget.Toast;
 
 import java.text.DecimalFormat;
 
-
 public class MainActivity extends AppCompatActivity {
 
-    String displayValue = "0";
     private TextView display;
+    String displayValue = "0";
     String getOperator = "";
     double firstInput;
     double secondInput;
@@ -37,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler(this));
 
         //display
-        display = (TextView)findViewById(R.id.textView);
+
         display.setText(displayValue);
         btnClear = (Button)findViewById(R.id.btnClear);
 
