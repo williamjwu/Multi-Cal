@@ -70,7 +70,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/clear_button_ripple_effect"
-                    android:onClick="onClickClear"
                     android:text="@string/op_clr"
                     android:textColor="@android:color/white"
                     android:textSize="19sp" />
