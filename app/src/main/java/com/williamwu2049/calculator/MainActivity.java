@@ -292,6 +292,7 @@ public class MainActivity extends AppCompatActivity {
                 displayValue = b.getText().toString();
                 updateScreen();
                 displayValue = "";
+                switchInputTarget = false;
             }
         }
     }
