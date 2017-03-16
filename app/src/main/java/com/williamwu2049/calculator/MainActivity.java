@@ -51,6 +51,54 @@ public class MainActivity extends AppCompatActivity {
         catch (NullPointerException ex) {
             Toast.makeText(MainActivity.this, "Fails to disable title", Toast.LENGTH_SHORT).show();
         }
+        btnClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String label = btnClear.getText().toString();
+
+                switch (label) {
+                    case "CLR":
+                        firstInput = 0;
+                        secondInput = 0;
+                        displayValue = "0";
+                        updateScreen();
+                        getOperator = "";
+                        switchInputTarget = true;
+                        break;
+                    case "DEL":
+                        if (displayValue.length() > 2) {
+                            displayValue = displayValue.substring(0, displayValue.length() - 1);
+                            updateScreen();
+                        }
+                        else if (displayValue.length() == 2) {
+                            if (displayValue.startsWith("-")) {
+                                displayValue = "0";
+                                btnClear.setText("CLR");
+                                updateScreen();
+                            }
+                            else {
+                                displayValue = displayValue.substring(0, displayValue.length() - 1);
+                                updateScreen();
+                            }
+                        }
+                        else if (displayValue.length() == 1) {
+                            displayValue = "0";
+                            btnClear.setText("CLR");
+                            updateScreen();
+                        }
+                        break;
+                }
+            }
+        });
+        btnClear.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                clearInfo();
+                updateScreen();
+                switchInputTarget = true;
+                return false;
+            }
+        });
     }
 
     @Override
@@ -130,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
 
     protected void onClickNumber(View v) {
         Button b = (Button) v;
-        if (displayValue.length() <= 20) {
+        if (displayValue.length() <= 18) {
             if (displayValue.equals("0")) {
                 if (!b.getText().toString().equals(".")) {
                 /*prevent crash method
@@ -153,6 +201,7 @@ public class MainActivity extends AppCompatActivity {
         handleSwitchInputTarget();
         updateScreen();
     }
+
 
     private void switchClearOrDelete() {
         if (ifUserInputting) {
@@ -231,11 +280,19 @@ public class MainActivity extends AppCompatActivity {
             switchInputTarget = false;
         }
         else if (secondInput == 0){
-            getOperator = b.getText().toString();
-            displayValue = b.getText().toString();
-            updateScreen();
-            displayValue = "";
-            switchInputTarget = false;
+            if (getOperator.equals("")) {
+                getOperator = b.getText().toString();
+                displayValue = b.getText().toString();
+                updateScreen();
+                displayValue = "";
+                switchInputTarget = false;
+            }
+            else if (!getOperator.equals("")) {
+                getOperator = b.getText().toString();
+                displayValue = b.getText().toString();
+                updateScreen();
+                displayValue = "";
+            }
         }
     }
 
@@ -246,43 +303,6 @@ public class MainActivity extends AppCompatActivity {
             ifUserInputting = false;
             switchClearOrDelete();
         }
-    }
-
-    protected void onClickClear(View v) {
-        Button b = (Button)v;
-        String label = b.getText().toString();
-        switch (label) {
-            case "CLR":
-                firstInput = 0;
-                secondInput = 0;
-                displayValue = "0";
-                updateScreen();
-                getOperator = "";
-                break;
-            case "DEL":
-                if (displayValue.length() > 2) {
-                    displayValue = displayValue.substring(0, displayValue.length() - 1);
-                    updateScreen();
-                }
-                else if (displayValue.length() == 2) {
-                    if (displayValue.startsWith("-")) {
-                        displayValue = "0";
-                        btnClear.setText("CLR");
-                        updateScreen();
-                    }
-                    else {
-                        displayValue = displayValue.substring(0, displayValue.length() - 1);
-                        updateScreen();
-                    }
-                }
-                else if (displayValue.length() == 1) {
-                    displayValue = "0";
-                    btnClear.setText("CLR");
-                    updateScreen();
-                }
-                break;
-        }
-
     }
 
 //    protected void onClickSquare(View v) {
