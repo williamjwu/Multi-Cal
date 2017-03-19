@@ -96,7 +96,7 @@ public class SecondActivity extends AppCompatActivity {
         displayValue = "";
     }
 
-    protected void onClickEnter(View v) {
+    public void onClickEnter(View v) {
         Button b = (Button) v;
         buttonLabel = b.getText().toString();
         if (buttonLabel.equals("enter")) {

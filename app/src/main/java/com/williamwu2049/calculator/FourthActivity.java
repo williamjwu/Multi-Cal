@@ -79,7 +79,7 @@ public class FourthActivity extends AppCompatActivity {
         buttonLabel = "";
     }
 
-    protected void onClickDelete(View v) {
+    public void onClickDelete(View v) {
         if (displayValue.length() > 1) {
             displayValue = displayValue.substring(0, displayValue.length() - 1);
             updateScreen();
@@ -94,7 +94,7 @@ public class FourthActivity extends AppCompatActivity {
         display4.setText(displayValue);
     }
 
-    protected void onClickEnter(View v) {
+    public void onClickEnter(View v) {
         Button b = (Button)v;
         buttonLabel = b.getText().toString();
         if (buttonLabel.equals("enter")) {
@@ -119,7 +119,7 @@ public class FourthActivity extends AppCompatActivity {
         }
     }
 
-    protected void onClickNumber(View v) {
+    public void onClickNumber(View v) {
         Button b = (Button) v;
         if (displayValue.equals("0")) {
             displayValue = "";
