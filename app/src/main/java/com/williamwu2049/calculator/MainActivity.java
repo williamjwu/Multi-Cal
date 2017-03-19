@@ -335,6 +335,9 @@ public class MainActivity extends AppCompatActivity {
         updateScreen();
         clearInfo();
         restorePreviousResult();
+        switchInputTarget = true;
+        ifUserInputting = false;
+        switchClearOrDelete();
     }
 
     protected void onClickSignSwitch(View v) {
