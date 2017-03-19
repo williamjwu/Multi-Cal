@@ -11,7 +11,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
@@ -176,7 +175,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    protected void onClickNumber(View v) {
+    public void onClickNumber(View v) {
         Button b = (Button) v;
         if (displayValue.length() <= 18) {
             if (displayValue.equals("0")) {
@@ -261,13 +260,15 @@ public class MainActivity extends AppCompatActivity {
                 clearInfo();
                 restorePreviousResult();
                 break;
+            default:
+                break;
 
         }
 
     }
 
 
-    protected void onClickOperator(View v) {
+    public void onClickOperator(View v) {
         Button b = (Button)v;
 
         if (secondInput != 0 && !getOperator.equals("")) {
@@ -297,7 +298,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    protected void onClickEqual(View v) {
+    public void onClickEqual(View v) {
         if (!getOperator.equals("")) {
             chooseOperation();
             switchInputTarget = true;
@@ -327,7 +328,7 @@ public class MainActivity extends AppCompatActivity {
 //        }
 //    }
 
-    protected void onClickSqrt(View v) {
+    public void onClickSqrt(View v) {
         //cast the output
         DecimalFormat formatDouble = new DecimalFormat("#.############");
         displayValue = Double.toString(Double.valueOf(formatDouble.format(Math.sqrt(firstInput))));
@@ -340,7 +341,7 @@ public class MainActivity extends AppCompatActivity {
         switchClearOrDelete();
     }
 
-    protected void onClickSignSwitch(View v) {
+    public void onClickSignSwitch(View v) {
         if (ifUserInputting) {
             if (!displayValue.equals("") && !displayValue.equals("0")) {
                 if (signSwitchState) {
@@ -360,5 +361,4 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-
 }
