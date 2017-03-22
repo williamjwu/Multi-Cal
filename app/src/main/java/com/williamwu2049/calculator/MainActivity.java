@@ -57,11 +57,8 @@ public class MainActivity extends AppCompatActivity {
 
                 switch (label) {
                     case "CLR":
-                        firstInput = 0;
-                        secondInput = 0;
-                        displayValue = "0";
+                        clearInfo();
                         updateScreen();
-                        getOperator = "";
                         switchInputTarget = true;
                         break;
                     case "DEL":
