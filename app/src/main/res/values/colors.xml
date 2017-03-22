@@ -30,6 +30,7 @@
     <color name="equal_button">#FFD740</color>
     <color name="pressed_equal_button">#FFFF00</color>
     <color name="clear_button">#F50057</color>
+    <color name="text_view_clear">#F50057</color>
     <color name="pressed_clear_button">#FF4081</color>
 
 </resources>
