@@ -1,4 +1,4 @@
-# Multi-Cal
+# Multi-Cal (Android version)
 Android Calculator
 
 This is a Calculator that contains several features that is useful to a developer.
