@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
     double pendingValue;
     Button btnClear;
     Boolean ifUserInputting = true;
-    Boolean signSwitchState = true; // false for positive sign, true for no sign
     Boolean switchInputTarget = true; //true for first input, false for second input
 //    Boolean signExists = false; //true for getOperator has value, false for it doesn't
 
@@ -304,7 +303,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-//    protected void onClickSquare(View v) {
+//    public void onClickSquare(View v) {
 //        //cast the output
 //        DecimalFormat formatDouble = new DecimalFormat("#.#######");
 //        try {
@@ -341,19 +340,15 @@ public class MainActivity extends AppCompatActivity {
     public void onClickSignSwitch(View v) {
         if (ifUserInputting) {
             if (!displayValue.equals("") && !displayValue.equals("0")) {
-                if (signSwitchState) {
-                    signSwitchState = false; //set state to negative sign
-                    displayValue = "-" + displayValue;
+                if (displayValue.startsWith("-")) {
+                    displayValue = displayValue.substring(1, displayValue.length());
                     updateScreen();
                     handleSwitchInputTarget();
                 }
                 else {
-                    signSwitchState = true;
-                    if (displayValue.startsWith("-")) {
-                        displayValue = displayValue.substring(1, displayValue.length());
-                        updateScreen();
-                        handleSwitchInputTarget();
-                    }
+                    displayValue = "-" + displayValue;
+                    updateScreen();
+                    handleSwitchInputTarget();
                 }
             }
         }
