@@ -25,4 +25,10 @@
     <string name="op_clr">CLR</string>
     <string name="start_number">0</string>
     <string name="text_enter">enter</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>
