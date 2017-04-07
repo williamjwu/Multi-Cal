@@ -24,8 +24,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnClear;
     Boolean ifUserInputting = true;
     Boolean switchInputTarget = true; //true for first input, false for second input
-//    Boolean signExists = false; //true for getOperator has value, false for it doesn't
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
