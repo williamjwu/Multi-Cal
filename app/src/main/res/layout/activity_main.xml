@@ -9,7 +9,6 @@
     android:background="@color/material.darker_grey"
     tools:context="com.williamwu2049.calculator.MainActivity">
 
-
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_main"
         android:layout_width="match_parent"
