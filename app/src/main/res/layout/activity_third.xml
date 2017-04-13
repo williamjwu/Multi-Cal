@@ -54,7 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@android:color/holo_orange_light"
+                android:background="@color/material.yellow.700"
                 android:orientation="horizontal">
 
                 <Button
@@ -101,7 +101,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
                 android:layout_weight="1"
-                android:background="@android:color/holo_orange_dark"
+                android:background="@color/material.amber.800"
                 android:orientation="horizontal">
 
                 <Button
@@ -148,7 +148,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
                 android:layout_weight="1"
-                android:background="@android:color/holo_red_light"
+                android:background="@color/material.orange.900"
                 android:orientation="horizontal">
 
                 <Button
@@ -195,7 +195,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
                 android:layout_weight="1"
-                android:background="@color/material.dark_grey"
+                android:background="@color/operation_button"
                 android:orientation="horizontal">
 
                 <Button
@@ -204,7 +204,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:background="@drawable/operation_button_ripple_effect"
                     android:onClick="onClickEnter"
                     android:text="enter"
                     android:textColor="@color/material.grey"
@@ -216,7 +216,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:background="@drawable/operation_button_ripple_effect"
                     android:onClick="onClickNumber"
                     android:text="0"
                     android:textColor="@color/material.grey"
@@ -228,7 +228,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:background="@drawable/operation_button_ripple_effect"
                     android:onClick="onClickDelete"
                     android:text="DEL"
                     android:textColor="@color/material.grey"
