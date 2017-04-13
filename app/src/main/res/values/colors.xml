@@ -12,7 +12,6 @@
     <color name="material.darker_blue">#1d7ecc</color>
     <color name="material.blue.600">#1e88e5</color>
     <color name="material.blue.900">#0d47a1</color>
-    <color name="material.orange">#ffff8800</color>
     <color name="material.A400">#1de9b6</color>
     <color name="material.grey_700">#616161</color>
     <color name="material.blue.700">#1976D2</color>
@@ -20,6 +19,10 @@
     <color name="material.indigo.500">#3F51B5</color>
     <color name="material.indigo.600">#3949AB</color>
     <color name="material.indigo.700">#303F9F</color>
+    <color name="material.yellow.700">#FBC02D</color>
+    <color name="material.amber.800">#FF8F00</color>
+    <color name="material.orange.900">#E65100</color>
+
 
     <!-- calculator used color -->
     <color name="numeric_button">#122D4A</color>
