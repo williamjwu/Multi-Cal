@@ -31,7 +31,7 @@
     <color name="text_view_text">#FFFFFF</color>
     <color name="operation_button">#122D42</color>
     <color name="pressed_operation_button">#FF1E4773</color>
-    <color name="equal_button">#FFD740</color>
+    <color name="equal_button">#FBC02D</color>
     <color name="pressed_equal_button">#FFFF00</color>
     <color name="clear_button">#F50057</color>
     <color name="text_view_clear">#F50057</color>
