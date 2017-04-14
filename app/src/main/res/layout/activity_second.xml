@@ -69,9 +69,9 @@
             android:layout_height="match_parent"
             android:fontFamily="sans-serif-light"
             android:text="@string/enter_a_text_view"
-            android:textColor="@android:color/background_light"
+            android:textColor="@android:color/white"
             android:textSize="23sp"
-            android:background="@android:color/holo_orange_light"
+            android:background="@color/material.yellow.700"
             android:id="@+id/textInputA"
             android:gravity="center"/>
 
@@ -80,8 +80,8 @@
             android:layout_height="match_parent"
             android:fontFamily="sans-serif-light"
             android:id="@+id/user_input_a"
-            android:background="@android:color/holo_orange_light"
-            android:textColor="@android:color/background_light"
+            android:background="@color/material.yellow.700"
+            android:textColor="@android:color/white"
             android:gravity="center" />
     </LinearLayout>
 
@@ -98,9 +98,9 @@
             android:layout_height="match_parent"
             android:fontFamily="sans-serif-light"
             android:text="@string/enter_b_text_view"
-            android:textColor="@android:color/background_light"
+            android:textColor="@android:color/white"
             android:textSize="23sp"
-            android:background="@android:color/holo_orange_dark"
+            android:background="@color/material.amber.800"
             android:id="@+id/textInputB"
             android:gravity="center"/>
 
@@ -109,7 +109,7 @@
             android:layout_height="match_parent"
             android:fontFamily="sans-serif-light"
             android:id="@+id/user_input_b"
-            android:background="@android:color/holo_orange_dark"
+            android:background="@color/material.amber.800"
             android:textColor="@android:color/background_light"
             android:gravity="center"/>
     </LinearLayout>
@@ -127,9 +127,9 @@
             android:layout_height="match_parent"
             android:fontFamily="sans-serif-light"
             android:text="@string/enter_c_text_view"
-            android:textColor="@android:color/background_light"
+            android:textColor="@android:color/white"
             android:textSize="23sp"
-            android:background="@android:color/holo_red_light"
+            android:background="@color/material.orange.900"
             android:id="@+id/textInputC"
             android:gravity="center"/>
 
@@ -138,8 +138,8 @@
             android:layout_height="match_parent"
             android:fontFamily="sans-serif-light"
             android:id="@+id/user_input_c"
-            android:background="@android:color/holo_red_light"
-            android:textColor="@android:color/background_light"
+            android:background="@color/material.orange.900"
+            android:textColor="@android:color/white"
             android:gravity="center"/>
     </LinearLayout>
         <LinearLayout
