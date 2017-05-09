@@ -16,9 +16,9 @@ public class quadraticBrain {
     }
 
     public double positiveSum() {
-        return ((-b)+(Math.sqrt(b*b-4*a*c)))/2*a;
+        return ((-b)+(Math.sqrt(b*b-4*a*c)))/(2*a);
     }
     public double negativeSum() {
-        return ((-b)-(Math.sqrt(b*b-4*a*c)))/2*a;
+        return ((-b)-(Math.sqrt(b*b-4*a*c)))/(2*a);
     }
 }

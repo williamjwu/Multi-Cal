@@ -38,13 +38,6 @@ public class SecondActivity extends AppCompatActivity {
 
         Toolbar actionToolbar = (Toolbar)findViewById(R.id.toolbar_second);
         setSupportActionBar(actionToolbar);
-        //disable title on action bar
-        try {
-            getSupportActionBar().setDisplayShowTitleEnabled(false);
-        }
-        catch (NullPointerException ex) {
-            Toast.makeText(SecondActivity.this, "Fails to disable title", Toast.LENGTH_SHORT).show();
-        }
     }
 
     @Override
