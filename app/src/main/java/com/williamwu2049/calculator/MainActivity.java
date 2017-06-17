@@ -210,11 +210,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     private void chooseOperation() {
-        //only call choose Operation when there getOperator has value
-
+        //only call choose Operation when getOperator has value
         calculatorBrain calculator = new calculatorBrain(firstInput, secondInput);
-//        DecimalFormat formatDot = new DecimalFormat("###,###,###,###.#");
-//        formatDot.setDecimalSeparatorAlwaysShown(false);
 
         switch(getOperator) {
             case "+":
