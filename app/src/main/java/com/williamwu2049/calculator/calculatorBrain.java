@@ -19,10 +19,12 @@ public class calculatorBrain {
 
     //mutator
     public double add() {
-        return firstInput + secondInput;
+        DecimalFormat formatDouble = new DecimalFormat("#.############");
+        return Double.valueOf(formatDouble.format(firstInput + secondInput));
     }
     public double minus() {
-        return firstInput - secondInput;
+        DecimalFormat formatDouble = new DecimalFormat("#.############");
+        return Double.valueOf(formatDouble.format(firstInput - secondInput));
     }
     public double multiply() {
         DecimalFormat formatDouble = new DecimalFormat("#.############");
