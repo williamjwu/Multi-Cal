@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
             inputTosecondInput();
         }
     }
-    public String formatDouble(String s) {
+    public String formatTailingZero(String s) {
         s = s.indexOf(".") < 0 ? s : s.replaceAll("0*$", "").replaceAll("\\.$", "");
         return s;
     }
@@ -218,21 +218,21 @@ public class MainActivity extends AppCompatActivity {
 
         switch(getOperator) {
             case "+":
-                displayValue = formatDouble(Double.toString(calculator.add()));
+                displayValue = formatTailingZero(Double.toString(calculator.add()));
                 updateScreen();
                 storePreviousResult();
                 clearInfo();
                 restorePreviousResult();
                 break;
             case "-":
-                displayValue = formatDouble(Double.toString(calculator.minus()));
+                displayValue = formatTailingZero(Double.toString(calculator.minus()));
                 updateScreen();
                 storePreviousResult();
                 clearInfo();
                 restorePreviousResult();
                 break;
             case "×":
-                displayValue = formatDouble(Double.toString(calculator.multiply()));
+                displayValue = formatTailingZero(Double.toString(calculator.multiply()));
                 updateScreen();
                 storePreviousResult();
                 clearInfo();
@@ -247,7 +247,7 @@ public class MainActivity extends AppCompatActivity {
                     switchClearOrDelete();
                 }
                 else {
-                    displayValue = formatDouble(Double.toString(calculator.divide()));
+                    displayValue = formatTailingZero(Double.toString(calculator.divide()));
                     updateScreen();
                     storePreviousResult();
                     clearInfo();
@@ -255,7 +255,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
             case "%":
-                displayValue = formatDouble(Double.toString(calculator.remain()));
+                displayValue = formatTailingZero(Double.toString(calculator.remain()));
                 updateScreen();
                 storePreviousResult();
                 clearInfo();
@@ -276,7 +276,7 @@ public class MainActivity extends AppCompatActivity {
             chooseOperation();
             firstInput = pendingValue;
             getOperator = b.getText().toString();
-            displayValue = "Ans" + b.getText().toString();
+            displayValue = "Ans " + b.getText().toString();
             updateScreen();
             displayValue = "";
             switchInputTarget = false;
@@ -332,7 +332,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClickSqrt(View v) {
         //cast the output
         DecimalFormat formatDouble = new DecimalFormat("#.############");
-        displayValue = Double.toString(Double.valueOf(formatDouble.format(Math.sqrt(firstInput))));
+        displayValue = formatTailingZero(formatDouble.format(Math.sqrt(firstInput)));
         storePreviousResult();
         updateScreen();
         clearInfo();
