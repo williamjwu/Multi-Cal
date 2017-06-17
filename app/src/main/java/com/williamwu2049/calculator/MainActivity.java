@@ -169,6 +169,10 @@ public class MainActivity extends AppCompatActivity {
             inputTosecondInput();
         }
     }
+    public String formatDouble(String s) {
+        s = s.indexOf(".") < 0 ? s : s.replaceAll("0*$", "").replaceAll("\\.$", "");
+        return s;
+    }
 
     public void onClickNumber(View v) {
         Button b = (Button) v;
@@ -209,24 +213,26 @@ public class MainActivity extends AppCompatActivity {
         //only call choose Operation when there getOperator has value
 
         calculatorBrain calculator = new calculatorBrain(firstInput, secondInput);
+//        DecimalFormat formatDot = new DecimalFormat("###,###,###,###.#");
+//        formatDot.setDecimalSeparatorAlwaysShown(false);
 
         switch(getOperator) {
             case "+":
-                displayValue = Double.toString(calculator.add());
+                displayValue = formatDouble(Double.toString(calculator.add()));
                 updateScreen();
                 storePreviousResult();
                 clearInfo();
                 restorePreviousResult();
                 break;
             case "-":
-                displayValue = Double.toString(calculator.minus());
+                displayValue = formatDouble(Double.toString(calculator.minus()));
                 updateScreen();
                 storePreviousResult();
                 clearInfo();
                 restorePreviousResult();
                 break;
             case "×":
-                displayValue = Double.toString(calculator.multiply());
+                displayValue = formatDouble(Double.toString(calculator.multiply()));
                 updateScreen();
                 storePreviousResult();
                 clearInfo();
@@ -241,7 +247,7 @@ public class MainActivity extends AppCompatActivity {
                     switchClearOrDelete();
                 }
                 else {
-                    displayValue = Double.toString(calculator.divide());
+                    displayValue = formatDouble(Double.toString(calculator.divide()));
                     updateScreen();
                     storePreviousResult();
                     clearInfo();
@@ -249,7 +255,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
             case "%":
-                displayValue = Double.toString(calculator.remain());
+                displayValue = formatDouble(Double.toString(calculator.remain()));
                 updateScreen();
                 storePreviousResult();
                 clearInfo();
