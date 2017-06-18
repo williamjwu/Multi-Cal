@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
             inputTosecondInput();
         }
     }
-    public String formatTailingZero(String s) {
+    private String formatTailingZero(String s) {
         s = s.indexOf(".") < 0 ? s : s.replaceAll("0*$", "").replaceAll("\\.$", "");
         return s;
     }
@@ -328,7 +328,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickSqrt(View v) {
         //cast the output
-        DecimalFormat formatDouble = new DecimalFormat("#.############");
+        DecimalFormat formatDouble = new DecimalFormat("#.###########");
         displayValue = formatTailingZero(formatDouble.format(Math.sqrt(firstInput)));
         storePreviousResult();
         updateScreen();
