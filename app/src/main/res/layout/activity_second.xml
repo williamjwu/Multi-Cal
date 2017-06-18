@@ -61,7 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@color/material.blue.500"
+            android:background="@color/material.blue.700"
             android:orientation="horizontal">
 
             <TextView
@@ -69,22 +69,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="5dp"
-                android:background="@color/material.blue.500"
+                android:background="@color/material.blue.700"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center"
                 android:text="@string/enter_a_text_view"
                 android:textColor="@android:color/white"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:elevation="50dp"/>
 
             <EditText
                 android:id="@+id/user_input_a"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="numberDecimal|number|numberSigned"
-                android:background="@color/material.blue.500"
+                android:background="@color/material.blue.700"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:elevation="50dp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -105,7 +107,8 @@
                 android:gravity="center"
                 android:text="@string/enter_b_text_view"
                 android:textColor="@android:color/white"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:elevation="30dp"/>
 
             <EditText
                 android:id="@+id/user_input_b"
@@ -115,7 +118,8 @@
                 android:background="@color/material.blue.600"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center"
-                android:textColor="@android:color/background_light" />
+                android:textColor="@android:color/background_light"
+                android:elevation="30dp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -123,7 +127,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@color/material.blue.700"
+            android:background="@color/material.blue.500"
             android:orientation="horizontal">
 
             <TextView
@@ -131,22 +135,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="5dp"
-                android:background="@color/material.blue.700"
+                android:background="@color/material.blue.500"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center"
                 android:text="@string/enter_c_text_view"
                 android:textColor="@android:color/white"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:elevation="10dp"/>
 
             <EditText
                 android:id="@+id/user_input_c"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="numberDecimal|number|numberSigned"
-                android:background="@color/material.blue.700"
+                android:background="@color/material.blue.500"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:elevation="10dp"/>
         </LinearLayout>
         <LinearLayout
             android:orientation="horizontal"
