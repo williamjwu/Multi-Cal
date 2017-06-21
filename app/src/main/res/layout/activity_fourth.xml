@@ -54,7 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/material.yellow.700"
+                android:background="@color/material.blue.700"
                 android:orientation="horizontal">
 
                 <Button
@@ -99,9 +99,8 @@
                 android:id="@+id/Row2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
                 android:layout_weight="1"
-                android:background="@color/material.amber.800"
+                android:background="@color/material.blue.600"
                 android:orientation="horizontal">
 
                 <Button
@@ -146,9 +145,8 @@
                 android:id="@+id/Row3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
                 android:layout_weight="1"
-                android:background="@color/material.orange.900"
+                android:background="@color/material.blue.500"
                 android:orientation="horizontal">
 
                 <Button
@@ -193,9 +191,8 @@
                 android:id="@+id/Row4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
                 android:layout_weight="1"
-                android:background="@color/operation_button"
+                android:background="@color/clear_button"
                 android:orientation="horizontal">
 
                 <Button
