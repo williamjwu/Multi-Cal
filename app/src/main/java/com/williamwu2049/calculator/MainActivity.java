@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         //notifies users that they are currently in main activity
         if (item.getItemId() == R.id.action_main_activity) {
-            Toast.makeText(MainActivity.this, "You are already in Main Function mode", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "You are already in Main Function", Toast.LENGTH_SHORT).show();
         }
 
         //switch to second activity
@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
             inputTosecondInput();
         }
     }
-    public String formatTailingZero(String s) {
+    private String formatTailingZero(String s) {
         s = s.indexOf(".") < 0 ? s : s.replaceAll("0*$", "").replaceAll("\\.$", "");
         return s;
     }
@@ -328,7 +328,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickSqrt(View v) {
         //cast the output
-        DecimalFormat formatDouble = new DecimalFormat("#.############");
+        DecimalFormat formatDouble = new DecimalFormat("#.###########");
         displayValue = formatTailingZero(formatDouble.format(Math.sqrt(firstInput)));
         storePreviousResult();
         updateScreen();

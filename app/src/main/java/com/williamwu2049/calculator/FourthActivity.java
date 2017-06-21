@@ -66,11 +66,8 @@ public class FourthActivity extends AppCompatActivity {
 
         //notifies users that they are currently in fourth activity
         else if (item.getItemId() == R.id.action_fourth_activity) {
-            Toast.makeText(FourthActivity.this, "You are already in Hexadecimal mode", Toast.LENGTH_SHORT).show();
+            Toast.makeText(FourthActivity.this, "You are already in Hexadecimal Function", Toast.LENGTH_SHORT).show();
         }
-
-
-
         return super.onOptionsItemSelected(item);
     }
 

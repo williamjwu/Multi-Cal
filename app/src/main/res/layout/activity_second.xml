@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="@color/material.blue.900"
+        android:background="@color/text_view"
         android:minHeight="?attr/actionBarSize"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:theme="@style/ThemeOverlay.AppCompat.Dark" />
@@ -33,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@android:color/white"
+            android:background="@color/text_view"
             android:elevation="4dp"
             android:fontFamily="sans-serif-light"
             android:gravity="bottom|end"
@@ -45,7 +45,7 @@
             android:paddingStart="10dp"
             android:paddingTop="24dp"
             android:text=""
-            android:textColor="@color/material.grey_700"
+            android:textColor="@color/text_view_text"
             android:textSize="50sp"
             autofit:minTextSize="28sp" />
 
@@ -61,7 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@color/material.blue.500"
+            android:background="@color/material.blue.700"
             android:orientation="horizontal">
 
             <TextView
@@ -69,21 +69,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="5dp"
-                android:background="@color/material.blue.500"
+                android:background="@color/material.blue.700"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center"
                 android:text="@string/enter_a_text_view"
                 android:textColor="@android:color/white"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:elevation="50dp"/>
 
             <EditText
                 android:id="@+id/user_input_a"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/material.blue.500"
+                android:inputType="numberDecimal|number|numberSigned"
+                android:background="@color/material.blue.700"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:elevation="50dp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -104,16 +107,19 @@
                 android:gravity="center"
                 android:text="@string/enter_b_text_view"
                 android:textColor="@android:color/white"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:elevation="30dp"/>
 
             <EditText
                 android:id="@+id/user_input_b"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:inputType="numberDecimal|number|numberSigned"
                 android:background="@color/material.blue.600"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center"
-                android:textColor="@android:color/background_light" />
+                android:textColor="@android:color/background_light"
+                android:elevation="30dp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -121,7 +127,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@color/material.blue.700"
+            android:background="@color/material.blue.500"
             android:orientation="horizontal">
 
             <TextView
@@ -129,21 +135,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="5dp"
-                android:background="@color/material.blue.700"
+                android:background="@color/material.blue.500"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center"
                 android:text="@string/enter_c_text_view"
                 android:textColor="@android:color/white"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:elevation="10dp"/>
 
             <EditText
                 android:id="@+id/user_input_c"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/material.blue.700"
+                android:inputType="numberDecimal|number|numberSigned"
+                android:background="@color/material.blue.500"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:elevation="10dp"/>
         </LinearLayout>
         <LinearLayout
             android:orientation="horizontal"
@@ -155,7 +164,7 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/operation_button"
+                android:background="@color/clear_button"
                 android:layout_weight="1">
                     <Button
                         android:layout_width="match_parent"
@@ -163,7 +172,7 @@
                         android:fontFamily="sans-serif-light"
                         android:id="@+id/btnEnter"
                         android:textColor="@android:color/white"
-                        android:background="@drawable/operation_button_ripple_effect"
+                        android:background="@drawable/clear_button_ripple_effect"
                         android:text="@string/text_enter"
                         android:textSize="18sp"
                         android:onClick="onClickEnter" />
