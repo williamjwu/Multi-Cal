@@ -59,7 +59,7 @@ public class SecondActivity extends AppCompatActivity {
 
         //notifies users that they are currently in second activity
         else if (item.getItemId() == R.id.action_second_activity) {
-            Toast.makeText(SecondActivity.this, "You are already in Quadratic Formula mode", Toast.LENGTH_SHORT).show();
+            Toast.makeText(SecondActivity.this, "You are already in Quadratic Function", Toast.LENGTH_SHORT).show();
         }
 
         //switch to third activity

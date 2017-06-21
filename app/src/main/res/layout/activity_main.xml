@@ -47,7 +47,7 @@
             android:maxLines="1"
             autofit:minTextSize="28sp"
             android:background="@color/text_view"
-            android:elevation="4dp"
+            android:elevation="2dp"
             />
 
         <LinearLayout

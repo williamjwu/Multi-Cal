@@ -59,7 +59,7 @@ public class ThirdActivity extends AppCompatActivity {
 
         //notifies users that they are currently in third activity
         else if (item.getItemId() == R.id.action_third_activity) {
-            Toast.makeText(ThirdActivity.this, "You are already in Binary mode", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ThirdActivity.this, "You are already in Binary Function", Toast.LENGTH_SHORT).show();
         }
 
         //switch to fourth activity
