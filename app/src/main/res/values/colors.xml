@@ -37,5 +37,12 @@
     <color name="clear_button">#F50057</color>
     <color name="text_view_clear">#F50057</color>
     <color name="pressed_clear_button">#FF4081</color>
-
+    <color name="first_row_numeric">#1976D2</color>
+    <color name="pressed_first_row_numeric">#1E6AB7</color>
+    <color name="second_row_numeric">#1E88E5</color>
+    <color name="pressed_second_row_numeric">#237AC9</color>
+    <color name="third_row_numeric">#2196F3</color>
+    <color name="pressed_third_row_numeric">#2687D5</color>
+    <color name="fourth_row_numeric">#42A5F5</color>
+    <color name="pressed_fourth_row_numeric">#2687D5</color>
 </resources>
