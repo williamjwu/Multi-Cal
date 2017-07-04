@@ -128,7 +128,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@color/material.blue.500"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:elevation="4dp">
 
             <TextView
                 android:id="@+id/textInputC"
