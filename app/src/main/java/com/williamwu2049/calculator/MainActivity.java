@@ -153,20 +153,12 @@ public class MainActivity extends AppCompatActivity {
         firstInput = pendingValue;
     }
 
-    private void inputTofirstInput() {
-        firstInput = Double.parseDouble(displayValue);
-    }
-
-    private void inputTosecondInput() {
-        secondInput = Double.parseDouble(displayValue);
-    }
-
     private void handleSwitchInputTarget() {
         if (switchInputTarget) {
-            inputTofirstInput();
+            firstInput = Double.parseDouble(displayValue);
         }
         else {
-            inputTosecondInput();
+            secondInput = Double.parseDouble(displayValue);
         }
     }
     private String formatTailingZero(String s) {
