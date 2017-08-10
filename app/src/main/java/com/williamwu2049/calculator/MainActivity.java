@@ -213,7 +213,7 @@ public class MainActivity extends AppCompatActivity {
                 clearInfo();
                 restorePreviousResult();
                 break;
-            case "-":
+            case "–":
                 displayValue = formatTailingZero(Double.toString(calculator.minus()));
                 updateScreen();
                 storePreviousResult();
