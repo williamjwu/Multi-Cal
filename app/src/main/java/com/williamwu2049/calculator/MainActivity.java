@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import java.text.DecimalFormat;
 
+
 public class MainActivity extends AppCompatActivity {
 
     private TextView display;
@@ -51,9 +52,9 @@ public class MainActivity extends AppCompatActivity {
         btnClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String label = btnClear.getText().toString();
+                String btnLabel = btnClear.getText().toString();
 
-                switch (label) {
+                switch (btnLabel) {
                     case "CLR":
                         clearInfo();
                         updateScreen();
