@@ -13,8 +13,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import java.text.DecimalFormat;
 
-import static android.R.attr.label;
-
 public class MainActivity extends AppCompatActivity {
 
     private TextView display;
