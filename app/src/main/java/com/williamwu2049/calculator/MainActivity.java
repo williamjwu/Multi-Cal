@@ -106,29 +106,26 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         //notifies users that they are currently in main activity
-        if (item.getItemId() == R.id.action_main_activity) {
-            Toast.makeText(MainActivity.this, "You are already in Main Function", Toast.LENGTH_SHORT).show();
-        }
-
-        //switch to second activity
-        else if (item.getItemId() == R.id.action_second_activity) {
-            Intent getNameScreenIntent = new Intent(this, SecondActivity.class);
-            startActivity(getNameScreenIntent);
-            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-        }
-
-        //switch to third activity
-        else if (item.getItemId() == R.id.action_third_activity) {
-            Intent getNameScreenIntent = new Intent(this, ThirdActivity.class);
-            startActivity(getNameScreenIntent);
-            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-        }
-
-        //switch to fourth activity
-        else if (item.getItemId() == R.id.action_fourth_activity) {
-            Intent getNameScreenIntent = new Intent(this, FourthActivity.class);
-            startActivity(getNameScreenIntent);
-            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        Intent getNameScreenIntent;
+        switch (item.getItemId()) {
+            case R.id.action_main_activity:
+                Toast.makeText(MainActivity.this, "You are already in Main Function", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.action_second_activity:
+                getNameScreenIntent = new Intent(this, SecondActivity.class);
+                startActivity(getNameScreenIntent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                break;
+            case R.id.action_third_activity:
+                getNameScreenIntent = new Intent(this, ThirdActivity.class);
+                startActivity(getNameScreenIntent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                break;
+            case R.id.action_fourth_activity:
+                getNameScreenIntent = new Intent(this, FourthActivity.class);
+                startActivity(getNameScreenIntent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                break;
         }
 
         return super.onOptionsItemSelected(item);
