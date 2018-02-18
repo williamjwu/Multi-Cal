@@ -23,6 +23,8 @@
     <string name="op_NegPos">–/+</string>
     <string name="op_sqrt">√</string>
     <string name="op_clr">CLR</string>
+    <string name="op_delete">DEL</string>
+    <string name="op_enter">enter</string>
     <string name="sign_addition">+</string>
     <string name="sign_dot">.</string>
     <string name="num_0">0</string>
