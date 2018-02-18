@@ -126,6 +126,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(getNameScreenIntent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 break;
+            default:
+                break;
         }
 
         return super.onOptionsItemSelected(item);
