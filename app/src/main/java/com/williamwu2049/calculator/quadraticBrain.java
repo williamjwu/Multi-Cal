@@ -2,10 +2,6 @@ package com.williamwu2049.calculator;
 
 import java.text.DecimalFormat;
 
-/**
- * Created by William on 1/1/17.
- */
-
 public class quadraticBrain {
     private double a;
     private double b;
