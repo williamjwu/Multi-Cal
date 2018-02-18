@@ -99,8 +99,8 @@ public class SecondActivity extends AppCompatActivity {
                 double userInputB = Double.parseDouble(textInputB.getText().toString());
                 double userInputC = Double.parseDouble(textInputC.getText().toString());
                 quadraticBrain quadraticSum = new quadraticBrain(userInputA, userInputB, userInputC);
-                displayValue = ("Ans1:   " + Double.toString(quadraticSum.positiveSum()) +
-                        "\nAns2:   " + Double.toString(quadraticSum.negativeSum()));
+                displayValue = ("x1:   " + Double.toString(quadraticSum.positiveSum()) +
+                        "\nx2:   " + Double.toString(quadraticSum.negativeSum()));
                 updateScreen();
 
             }

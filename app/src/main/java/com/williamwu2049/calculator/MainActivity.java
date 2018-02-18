@@ -226,7 +226,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case "÷":
                 if (secondInput == 0) {
-                    displayValue = "Error";
+                    displayValue = "∞";
                     updateScreen();
                     clearInfo();
                     ifUserInputting = false;
