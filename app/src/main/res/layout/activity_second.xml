@@ -36,7 +36,7 @@
             android:background="@color/text_view"
             android:elevation="4dp"
             android:fontFamily="sans-serif-light"
-            android:gravity="bottom|end"
+            android:gravity="bottom|start"
             android:maxLines="2"
             android:paddingBottom="7dp"
             android:paddingEnd="10dp"
