@@ -123,8 +123,8 @@ public class ThirdActivity extends AppCompatActivity {
             displayValue = "";
         }
         displayValue += b.getText();
-        if (displayValue.length() > 9) {
-            displayValue = displayValue.substring(0, 9);
+        if (displayValue.length() > 6) {
+            displayValue = displayValue.substring(0, 6);
             Toast.makeText(ThirdActivity.this, "You have reached the input limit", Toast.LENGTH_SHORT).show();
         }
         updateScreen();

@@ -36,16 +36,10 @@
             android:layout_weight="1"
             android:background="@color/text_view"
             android:gravity="bottom|end"
-            android:maxLines="3"
-            android:paddingBottom="10dp"
-            android:paddingStart="10dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingEnd="10dp"
+            android:maxLines="1"
+            android:paddingEnd="5dp"
             android:textColor="@android:color/white"
-            android:textSize="40sp"
-            autofit:minTextSize="28sp"
-            android:elevation="4dp"/>
+            android:textSize="55sp" />
 
         <LinearLayout
             android:id="@+id/InputPad"
