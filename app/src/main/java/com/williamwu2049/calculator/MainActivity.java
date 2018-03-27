@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
     double secondInput = 0;
     double pendingValue;
     Button btnClear;
-    Boolean ifUserInputting = true;
-    Boolean switchInputTarget = true; //true for first input, false for second input
+    boolean ifUserInputting = true;
+    boolean switchInputTarget = true; //true for first input, false for second input
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -125,6 +125,8 @@ public class MainActivity extends AppCompatActivity {
                 getNameScreenIntent = new Intent(this, FourthActivity.class);
                 startActivity(getNameScreenIntent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                break;
+            default:
                 break;
         }
 
