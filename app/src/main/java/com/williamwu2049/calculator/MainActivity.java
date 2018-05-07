@@ -84,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
         btnClear.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
